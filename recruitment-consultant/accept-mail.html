@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Email</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        function closeForm() {
+            document.getElementById("schedule-form").style.display = "none";
+        }
+    </script>
+    <style>
+        .button {
+            float: right;
+            margin-right: 20px;
+            outline: none;
+            background-image: linear-gradient(to bottom,white, #f0f0f0);
+            border: 0.5px solid lightgray;
+            border-radius: 4px;
+            width: 100px;
+        }
+
+        .button:hover {
+            background-image: linear-gradient(to right, #22acf0, #22acf0);
+            border-radius: 4px;
+            color: white;
+        }
+
+        .button:focus {
+            outline: none;
+        }
+
+        #schedule-form {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0vh;
+            left: 0;
+            display: block;
+            background-color: white;
+            background-color:rgba(255, 255, 255, 0.9);
+            z-index: 100;
+            overflow-y: hidden;
+        }
+
+        #schedule-form-content {
+            width: 20%;
+            margin-left: 40%;
+            height: 40vh;
+            margin-top: 30vh;
+            background-color: white;
+            border: 0.5px solid #ddd;
+            padding-left: 10px;
+            padding-top: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        }
+
+        .schedule-div {
+            width: 105%;
+            float: left;
+            margin-top: 0.3vh;
+        }
+
+        .schedule-div-title {
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+
+        .schedule-input {
+            background-image: linear-gradient(to bottom,white, #f0f0f0);
+            height: 30px;
+            width: 90%;
+            border: 0.5px solid lightgray;
+            border-radius: 4px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            padding-left: 5px;
+        }
+    </style>
+</head>
+
+<body> 
+    <div id="body-header">
+        <div id="body-header-info">
+            <div id="body-header-logo">
+                <img id="body-header-logo-img" src="../img/Major-logo.png" />
+            </div>
+            <div id="body-header-menu-list-menu">
+                <a href="homepage-consultant.html" class="body-header-menu-item">Home</a>
+                <div class="separator">|</div>
+                <div class="navbar-header-dropdown">
+                    <button class="navbar-header-dropbtn">Recruitment <i class="fa fa-caret-down"></i></button>
+                    <div class="navbar-header-dropdown-content">
+                        <a href="createCV-supervisor.html">Create CV</a>
+                        <a href="newCV.html">New CV</a>
+                        <a href="waitedCV.html">Waiting interview</a>
+                    </div>
+                </div>
+                <div class="separator">|</div>
+                <div class="navbar-header-dropdown body-header-user-info">
+                    <button class="navbar-header-dropbtn" id="body-header-user-info-button">
+                        <span style="float: left;">Full name &nbsp; </span>
+                        <img class="rounded-circle" src="../img/user.png" width="40vh" height="40vh" style="float: left;" />
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="navbar-header-dropdown-content body-header-user-info-dropdown">
+                        <a href="#">Profile</a>
+                        <a href="../login.html">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="body-header-search">
+            <input type="text" placeholder="Search" id="body-header-search-input">
+        </div>
+    </div>
+    <div id="create-interview-body" style="margin-bottom: 3vh;">
+        <div id="mail-header">
+            <form action="newCV.html"><button id="mail-header-send-button"><img src="../img/send-message-6-663814.png" alt="send-icon">Send</button></form>
+            <div id="mail-header-from" class="mail-header-div">
+                <div class="mail-header-title">From</div>
+                <input type="text">
+            </div>
+            <div id="mail-header-to" class="mail-header-div">
+                <div class="mail-header-title">To</div>
+                <input type="text">
+            </div>
+            <div id="mail-header-subject" class="mail-header-div">
+                <div class="mail-header-title">Subject</div>
+                <input type="text">
+            </div>
+        </div>
+        <textarea id="mail-body" rows="20"></textarea>
+    </div>
+    <div id="body-footer">
+        <div id="body-footer-quicklink" class="body-footer-div">
+            <div class="body-footer-title">Quick Links</div>
+            <div class="body-footer-content">
+                <a href="http://major.vn/#top">About Us</a><br>
+                <a href="http://major.vn/#top">Terms of use</a><br>
+                <a href="http://major.vn/#top">FAQ</a><br>
+                <a href="http://major.vn/#top">Support</a>
+            </div>
+        </div>
+        <div id="body-footer-followus" class="body-footer-div">
+            <div class="body-footer-title">Follow Us</div>
+            <div class="body-footer-content">
+                <a href="https://www.facebook.com/majorsel" class="fa fa-facebook"><span>Facebook</span></a>
+            </div>
+        </div>
+        <div id="body-footer-contact" class="body-footer-div-contact">
+            <div class="body-footer-title">Contact</div>
+            <div class="body-footer-content">
+                <span>Head Quarter: 269A Nguyen Trong Tuyen Street, Ward 10, District Phu Nhuan, HCM City, Viet Nam</span>
+                <span>Branch 2 : 160/72 Phan Huy Ich Street, Ward 12, Go Vap District, HCM City, Viet Nam</span>
+                <span>Email: hungtien@truongvietanh.com.</span>
+            </div>
+        </div>
+    </div>
+    <div id="schedule-form">
+        <div id="schedule-form-content">
+            <h5>Scheduling interview time</h5>
+            <h6>Due date for prepare procedure</h6>
+            <div class="schedule-div">
+                <input type="date" class="schedule-input">
+            </div>
+            <h6>Due date for in Viet Nam</h6>
+            <div class="schedule-div">
+                <input type="date" class="schedule-input">
+            </div>
+            <button class="button" onclick="closeForm()">OK</button>
+        </div>
+    </div>
+</body>
+
+</html>

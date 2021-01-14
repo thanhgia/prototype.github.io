@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update CV</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #createCV-supervisor-body {
+            float: left;
+            min-height: 75vh;
+            width: 54%;
+            margin-left: 23%;
+            margin-top: 23vh;
+            margin-bottom: 5vh;
+            background-color: white;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+            padding-left: 4vh;
+            padding-top: 2vh;
+        }
+
+        h5 {
+            font-size: 1.1em;
+        }
+        input[type="text"]:disabled {
+            background-image: linear-gradient(to bottom,#dddddd, #dddddd);
+        }
+    </style>
+    <script>
+        function activeInput() {
+            if (document.getElementById("basicInfo-reference__select").value === "Others") {
+                document.getElementById("reference-input").disabled = false;
+            } else {
+                document.getElementById("reference-input").value = '';
+                document.getElementById("reference-input").disabled = true;
+            }
+            
+        }
+    </script>
+</head>
+
+<body>
+    <div id="body-header">
+        <div id="body-header-info">
+            <div id="body-header-logo">
+                <img id="body-header-logo-img" src="../img/Major-logo.png" />
+            </div>
+            <div id="body-header-menu-list-menu" style="width: 55%;">
+                <a href="../hr-supervisor/homepage.html" class="body-header-menu-item">Home</a>
+                <div class="separator">|</div>
+                <div class="navbar-header-dropdown">
+                    <button class="navbar-header-dropbtn">Recruitment <i class="fa fa-caret-down"></i></button>
+                    <div class="navbar-header-dropdown-content">
+                        <a href="createCV-supervisor.html">Create CV</a><a href="newCV.html">New CV</a>
+                        <a href="waitedCV.html">Waiting interview</a>
+                        <a href="teacher-recruitment.html">Teacher</a><a href="source-statistic.html">Supply resource</a>
+                    </div>
+                </div>
+                <div class="separator">|</div>
+                <div class="navbar-header-dropdown">
+                    <button class="navbar-header-dropbtn">Quality <i class="fa fa-caret-down"></i></button>
+                    <div class="navbar-header-dropdown-content">
+                        <a href="QualitySupervisor.html">Teacher</a>
+                        <a href="qualitypage.html">AC</a>
+                    </div>
+                </div>
+                <div class="separator">|</div>
+                <div class="navbar-header-dropdown">
+                    <button class="navbar-header-dropbtn">Others <i class="fa fa-caret-down"></i></button>
+                    <div class="navbar-header-dropdown-content">
+                        <a href="manageAccount.html">Account management</a>
+                        <a href="manageHoliday.html">Holiday management</a><a href="manageNoti.html">Notification management</a>
+                    </div>
+                </div>
+                <div class="separator">|</div>
+                <div class="navbar-header-dropdown body-header-user-info">
+                    <button class="navbar-header-dropbtn" id="body-header-user-info-button">
+                        <span style="float: left;">Full name &nbsp; </span>
+                        <img class="rounded-circle" src="../img/user.png" width="40vh" height="40vh" style="float: left;" />
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="navbar-header-dropdown-content body-header-user-info-dropdown">
+                        <a href="#">Profile</a>
+                        <a href="../login.html">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="body-header-search">
+            <input type="text" placeholder="Search" id="body-header-search-input">
+        </div>
+    </div>
+    
+    <div id="createCV-supervisor-body">
+        <h4>Update CV</h4>
+        <h5>Basic information</h5>
+        <div id="basicInfo-image" style="width: 50%; height: 30.5vh;">
+            <div class="createCv-drop-zone-basicInfo" style="width: 42%; height: 90%;">
+                <span class="createCv-drop-zone__prompt">Drop image here or click to upload</span>
+                <input type="file" name="myFile" class="createCv-drop-zone__input" accept="image/*">
+            </div>
+        </div>
+        <div id="basicInfo-fullname" class="basicInfo-div">
+            <span class="basicInfo-div-title">Fullname <span class="compulsory">(*)</span></span><br>
+            <input type="text" class="basicInfo-input">
+        </div>
+        <div id="basicInfo-dob" class="basicInfo-div">
+            <span class="basicInfo-div-title">Date of birth <span class="compulsory">(*)</span></span><br>
+            <input type="date" class="basicInfo-input">
+        </div>
+        <div id="basicInfo-phone" class="basicInfo-div">
+            <span class="basicInfo-div-title">Phone numbers <span class="compulsory">(*)</span></span><br>
+            <input type="tel" class="basicInfo-input">
+        </div>
+        <div id="basicInfo-nationality" class="basicInfo-div">
+            <span class="basicInfo-div-title">Nationality <span class="compulsory">(*)</span></span><br>
+            <select name="basicInfo-nationality__select" id="basicInfo-nationality__select" class="basicInfo-input">
+                <option value="UK">UK</option>
+                <option value="Ireland">Ireland</option>
+                <option value="Scotland">Scotland</option>
+                <option value="US">US</option>
+                <option value="Canada">Canada</option>
+                <option value="New Zealand">New Zealand</option>
+                <option value="Australia">Australia</option>
+                <option value="South Africa">South Africa</option>
+            </select>
+        </div>
+        <div id="basicInfo-country" class="basicInfo-div">
+            <span class="basicInfo-div-title">Country of present <span class="compulsory">(*)</span></span><br>
+            <input type="text" class="basicInfo-input">
+        </div>
+        <div id="basicInfo-email" class="basicInfo-div">
+            <span class="basicInfo-div-title">Email address <span class="compulsory">(*)</span></span><br>
+            <input type="text" class="basicInfo-input">
+        </div>
+        <div id="basicInfo-skype" class="basicInfo-div">
+            <span class="basicInfo-div-title">Skype <span class="compulsory">(*)</span></span><br>
+            <input type="text" class="basicInfo-input">
+        </div>
+        <div id="basicInfo-source" class="basicInfo-div">
+            <span class="basicInfo-div-title">Where you know this from? <span class="compulsory">(*)</span></span><br>
+            <select name="basicInfo-reference__select" id="basicInfo-reference__select" class="basicInfo-input" onchange="activeInput()">
+                <option value="UK">UK</option>
+                <option value="Ireland">Ireland</option>
+                <option value="Scotland">Scotland</option>
+                <option value="US">US</option>
+                <option value="Canada">Canada</option>
+                <option value="New Zealand">New Zealand</option>
+                <option value="Australia">Australia</option>
+                <option value="Others">Others</option>
+            </select>
+        </div>
+        <div id="basicInfo-skype" class="basicInfo-div">
+            <span class="basicInfo-div-title">Reference</span><br>
+            <input type="text" class="basicInfo-input" id="reference-input" disabled>
+        </div>
+        <div class="createCv-iframe-border" style="float: left; margin-top: 2vh; margin-bottom: 2vh;"></div>
+        <h5>Education</h5>
+        <div id="basicInfo-email" class="basicInfo-div">
+            <span class="basicInfo-div-title">Course name</span><br>
+            <input type="text" class="basicInfo-input">
+        </div>
+        <div id="basicInfo-country" class="basicInfo-div">
+            <span class="basicInfo-div-title">Institution name</span><br>
+            <input type="text" class="basicInfo-input">
+        </div>
+        <div class="createCv-iframe-border" style="float: left; margin-top: 2vh; margin-bottom: 2vh;"></div>
+        <div id="compulsory-certificate" style="float: left; width: 100%;">
+            <h5>Certificate</h5>
+            <div class="qualification-page-div">
+                <input type="checkbox" class="qualification-page-checkbox" id="tefl" name="tefl" value="tefl">
+                <label for="tefl"> TEFL</label><br>
+            </div>
+            <div class="qualification-page-div">
+                <input type="checkbox" class="qualification-page-checkbox" id="tesol" name="tesol" value="tesol">
+                <label for="tesol"> TESOL</label><br>
+            </div>
+            <div class="qualification-page-div">
+                <input type="checkbox" class="qualification-page-checkbox" id="celta" name="celta" value="celta">
+                <label for="celta"> CELTA</label><br>
+            </div>
+        </div>
+        <div style="font-size: 0.9em; float: left;"><span class="compulsory">(*)</span><span> Compulsory field</span></div>
+        <div id="createCv-submit" style="margin-left: 85%; margin-bottom: 2vh;">
+            <button id="createCv-submit-button">Submit</button>
+        </div>
+    </div>
+    <div id="body-footer">
+        <div id="body-footer-quicklink" class="body-footer-div">
+            <div class="body-footer-title">Quick Links</div>
+            <div class="body-footer-content">
+                <a href="http://major.vn/#top">About Us</a><br>
+                <a href="http://major.vn/#top">Terms of use</a><br>
+                <a href="http://major.vn/#top">FAQ</a><br>
+                <a href="http://major.vn/#top">Support</a>
+            </div>
+        </div>
+        <div id="body-footer-followus" class="body-footer-div">
+            <div class="body-footer-title">Follow Us</div>
+            <div class="body-footer-content">
+                <a href="https://www.facebook.com/majorsel" class="fa fa-facebook"><span>Facebook</span></a>
+            </div>
+        </div>
+        <div id="body-footer-contact" class="body-footer-div-contact">
+            <div class="body-footer-title">Contact</div>
+            <div class="body-footer-content">
+                <span>Head Quarter: 269A Nguyen Trong Tuyen Street, Ward 10, District Phu Nhuan, HCM City, Viet Nam</span>
+                <span>Branch 2 : 160/72 Phan Huy Ich Street, Ward 12, Go Vap District, HCM City, Viet Nam</span>
+                <span>Email: hungtien@truongvietanh.com.</span>
+            </div>
+        </div>
+    </div>
+    <script src="../js/uploadImage.js"></script>
+</body>
+
+</html>

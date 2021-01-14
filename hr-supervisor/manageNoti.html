@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notification management</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script>
+        function showNoti() {
+            var x = document.getElementById("body-content-notification-item");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+    <style>
+        .schedule-div-title {
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+
+        .schedule-input {
+            background-image: linear-gradient(to bottom, white, #f0f0f0);
+            height: 30px;
+            width: 93%;
+            border: 0.5px solid lightgray;
+            border-radius: 4px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            padding-left: 5px;
+        }
+
+        i:hover {
+            color: blue;
+        }
+
+        .button {
+            float: right;
+            margin-right: 20px;
+            outline: none;
+            background-image: linear-gradient(to bottom, white, #f0f0f0);
+            border: 0.5px solid lightgray;
+            border-radius: 4px;
+            width: 180px;
+        }
+
+        .button:hover {
+            background-image: linear-gradient(to right, #22acf0, #22acf0);
+            border-radius: 4px;
+            color: white;
+        }
+
+        .button:focus {
+            outline: none;
+        }
+
+        #delete-body {
+            float: left;
+            height: 10vh;
+            width: 28%;
+            margin-left: 35%;
+            margin-top: 30vh;
+            background-color: white;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+        }
+
+        .schedule-div {
+            width: 50%;
+            float: left;
+            margin-top: 0.3vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="body-header">
+        <div id="body-header-info">
+            <div id="body-header-logo">
+                <img id="body-header-logo-img" src="../img/Major-logo.png" />
+            </div>
+            <div id="body-header-menu-list-menu" style="width: 55%;">
+                <a href="../hr-supervisor/homepage.html" class="body-header-menu-item">Home</a>
+                <div class="separator">|</div>
+                <div class="navbar-header-dropdown">
+                    <button class="navbar-header-dropbtn">Recruitment <i class="fa fa-caret-down"></i></button>
+                    <div class="navbar-header-dropdown-content">
+                        <a href="createCV-supervisor.html">Create CV</a><a href="newCV.html">New CV</a>
+                        <a href="waitedCV.html">Waiting interview</a>
+                        <a href="teacher-recruitment.html">Teacher</a><a href="source-statistic.html">Supply resource</a>
+                    </div>
+                </div>
+                <div class="separator">|</div>
+                <div class="navbar-header-dropdown">
+                    <button class="navbar-header-dropbtn">Quality <i class="fa fa-caret-down"></i></button>
+                    <div class="navbar-header-dropdown-content">
+                        <a href="QualitySupervisor.html">Teacher</a>
+                        <a href="qualitypage.html">AC</a>
+                    </div>
+                </div>
+                <div class="separator">|</div>
+                <div class="navbar-header-dropdown">
+                    <button class="navbar-header-dropbtn">Others <i class="fa fa-caret-down"></i></button>
+                    <div class="navbar-header-dropdown-content">
+                        <a href="manageAccount.html">Account management</a>
+                        <a href="manageHoliday.html">Holiday management</a><a href="manageNoti.html">Notification management</a>
+                    </div>
+                </div>
+                <div class="separator">|</div>
+                <div class="navbar-header-dropdown body-header-user-info">
+                    <button class="navbar-header-dropbtn" id="body-header-user-info-button">
+                        <span style="float: left;">Full name &nbsp; </span>
+                        <img class="rounded-circle" src="../img/user.png" width="40vh" height="40vh" style="float: left;" />
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="navbar-header-dropdown-content body-header-user-info-dropdown">
+                        <a href="#">Profile</a>
+                        <a href="../login.html">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="body-header-search">
+            <input type="text" placeholder="Search" id="body-header-search-input">
+        </div>
+    </div>
+    <div id="manage-expense-body" style="min-height: 75vh;">
+        <div id="body-content-manage-expense-table" class="shadow p-3 mb-5 bg-white rounded main-table">
+            <div id="body-content-table-title">
+                <h5>List Notification</h5>
+            </div>
+            <table class="table table-hover" id="example">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Content</th>
+                        <th scope="col">Due time</th>
+                        <th scope="col">Number of times earlier</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Notification for HR management</td>
+                        <td>None</td>
+                        <td>3 days</td>
+                        <td><i class="fa fa-edit" data-toggle="modal" data-target="#update"></i></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Notification for Quality management</td>
+                        <td>None</td>
+                        <td>3 days</td>
+                        <td><i class="fa fa-edit" data-toggle="modal" data-target="#update"></i></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Notification for Recruitment consultant</td>
+                        <td>15th of every month</td>
+                        <td>3 days</td>
+                        <td><i class="fa fa-edit" data-toggle="modal" data-target="#update"></i></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Notification for Compliance officer</td>
+                        <td>None</td>
+                        <td>3 days</td>
+                        <td><i class="fa fa-edit" data-toggle="modal" data-target="#update"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="body-footer">
+        <div id="body-footer-quicklink" class="body-footer-div">
+            <div class="body-footer-title">Quick Links</div>
+            <div class="body-footer-content">
+                <a href="http://major.vn/#top">About Us</a><br>
+                <a href="http://major.vn/#top">Terms of use</a><br>
+                <a href="http://major.vn/#top">FAQ</a><br>
+                <a href="http://major.vn/#top">Support</a>
+            </div>
+        </div>
+        <div id="body-footer-followus" class="body-footer-div">
+            <div class="body-footer-title">Follow Us</div>
+            <div class="body-footer-content">
+                <a href="https://www.facebook.com/majorsel" class="fa fa-facebook"><span>Facebook</span></a>
+            </div>
+        </div>
+        <div id="body-footer-contact" class="body-footer-div-contact">
+            <div class="body-footer-title">Contact</div>
+            <div class="body-footer-content">
+                <span>Head Quarter: 269A Nguyen Trong Tuyen Street, Ward 10, District Phu Nhuan, HCM City, Viet Nam</span>
+                <span>Branch 2 : 160/72 Phan Huy Ich Street, Ward 12, Go Vap District, HCM City, Viet Nam</span>
+                <span>Email: hungtien@truongvietanh.com.</span>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="update">
+        <div id="delete-body" class="modal-dialog modal-xl">
+            <div class="modal-content" style="float: left; display: inline; border: none;">
+                <div class="modal-header">
+                    <h4 class="modal-title">Update number of times</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                        <div class="schedule-div">
+                            <span class="schedule-div-title">Number of time</span></span><br>
+                            <input type="text" class="schedule-input">
+                        </div>
+                        <div class="schedule-div">
+                            <span class="schedule-div-title">Type of time</span></span><br>
+                            <select type="text" class="schedule-input">
+                                <option value="day">Day(s)</option>
+                                <option value="week">Week(s)</option>
+                            </select>
+                        </div>
+                  </div>
+                  
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <button type="button" class="button" data-dismiss="modal" style="width: 80px;">Submit</button>
+                  </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

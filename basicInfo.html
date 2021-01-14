@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="css/style.css">
+<div class="createCv-iframe-page">
+    <span class="createCv-iframe-title">Basic information</span>
+    <div id="basicInfo-image">
+        <div class="createCv-drop-zone-basicInfo">
+            <span class="createCv-drop-zone__prompt">Drop image here or click to upload</span>
+            <input type="file" name="myFile" class="createCv-drop-zone__input" accept="image/*">
+        </div>
+    </div>
+    <div id="basicInfo-main-right">
+        <div id="basicInfo-fullname">
+            <span class="basicInfo-div-title">Fullname <span class="compulsory">(*)</span></span><br>
+            <input type="text" class="basicInfo-input-right">
+        </div>
+        <div id="basicInfo-dob">
+            <span class="basicInfo-div-title">Date of birth <span class="compulsory">(*)</span></span><br>
+            <input type="date" class="basicInfo-input-right">
+        </div>
+        <div id="basicInfo-phone">
+            <span class="basicInfo-div-title">Phone numbers <span class="compulsory">(*)</span></span><br>
+            <input type="tel" class="basicInfo-input-right">
+        </div>
+    </div>
+    <div id="basicInfo-nationality" class="basicInfo-div">
+        <span class="basicInfo-div-title">Nationality <span class="compulsory">(*)</span></span><br>
+        <select name="basicInfo-nationality__select" id="basicInfo-nationality__select" class="basicInfo-input">
+            <option value="UK">UK</option>
+            <option value="Ireland">Ireland</option>
+            <option value="Scotland">Scotland</option>
+            <option value="US">US</option>
+            <option value="Canada">Canada</option>
+            <option value="New Zealand">New Zealand</option>
+            <option value="Australia">Australia</option>
+            <option value="South Africa">South Africa</option>
+        </select>
+    </div>
+    <div id="basicInfo-country" class="basicInfo-div">
+        <span class="basicInfo-div-title">Country of present <span class="compulsory">(*)</span></span><br>
+        <input type="text" class="basicInfo-input">
+    </div>
+    <div id="basicInfo-email" class="basicInfo-div">
+        <span class="basicInfo-div-title">Email address <span class="compulsory">(*)</span></span><br>
+        <input type="text" class="basicInfo-input">
+    </div>
+    <div id="basicInfo-skype" class="basicInfo-div">
+        <span class="basicInfo-div-title">Skype <span class="compulsory">(*)</span></span><br>
+        <input type="text" class="basicInfo-input">
+    </div>
+    <div id="basicInfo-source" class="basicInfo-div">
+        <span class="basicInfo-div-title">Where you know this from? <span class="compulsory">(*)</span></span><br>
+        <select name="basicInfo-nationality__select" id="basicInfo-nationality__select" class="basicInfo-input">
+            <option value="UK">UK</option>
+            <option value="Ireland">Ireland</option>
+            <option value="Scotland">Scotland</option>
+            <option value="US">US</option>
+            <option value="Canada">Canada</option>
+            <option value="New Zealand">New Zealand</option>
+            <option value="Australia">Australia</option>
+            <option value="South Africa">Others</option>
+        </select>
+    </div>
+    <script src="./js/uploadImage.js"></script>
+</div>

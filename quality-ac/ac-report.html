@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC Report</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/acpage.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script>
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            var header = document.getElementById("body-header");
+            var sticky = header.offsetTop;
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+
+        $(document).ready(function() {
+            $("#body-content-table-search-field").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#table-info tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+
+        function increaseValue() {
+            var value = parseInt(document.getElementById('number').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value++;
+            document.getElementById('number').value = value;
+        }
+
+        function decreaseValue() {
+            var value = parseInt(document.getElementById('number').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value < 1 ? value = 1 : '';
+            value--;
+            document.getElementById('number').value = value;
+        }
+
+        function increaseValue1() {
+            var value = parseInt(document.getElementById('number1').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value++;
+            document.getElementById('number1').value = value;
+        }
+
+        function decreaseValue1() {
+            var value = parseInt(document.getElementById('number1').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value < 1 ? value = 1 : '';
+            value--;
+            document.getElementById('number1').value = value;
+        }
+
+        function increaseValue2() {
+            var value = parseInt(document.getElementById('number2').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value++;
+            document.getElementById('number2').value = value;
+        }
+
+        function decreaseValue2() {
+            var value = parseInt(document.getElementById('number2').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value < 1 ? value = 1 : '';
+            value--;
+            document.getElementById('number2').value = value;
+        }
+
+        function increaseValue3() {
+            var value = parseInt(document.getElementById('number3').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value++;
+            document.getElementById('number3').value = value;
+        }
+
+        function decreaseValue3() {
+            var value = parseInt(document.getElementById('number3').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value < 1 ? value = 1 : '';
+            value--;
+            document.getElementById('number3').value = value;
+        }
+
+        function increaseValue4() {
+            var value = parseInt(document.getElementById('number4').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value++;
+            document.getElementById('number4').value = value;
+        }
+
+        function decreaseValue4() {
+            var value = parseInt(document.getElementById('number4').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value < 1 ? value = 1 : '';
+            value--;
+            document.getElementById('number4').value = value;
+        }
+
+        function increaseValue5() {
+            var value = parseInt(document.getElementById('number5').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value++;
+            document.getElementById('number5').value = value;
+        }
+
+        function decreaseValue5() {
+            var value = parseInt(document.getElementById('number5').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value < 1 ? value = 1 : '';
+            value--;
+            document.getElementById('number5').value = value;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="body-header">
+        <div id="body-header-info">
+            <div id="body-header-logo">
+                <img id="body-header-logo-img" src="../img/Major-logo.png" />
+            </div>
+            <div id="body-header-menu-list-menu">
+                <a href="ac-report.html" class="body-header-menu-item" style="margin-left: 19vh;">Home</a>
+                <div class="separator">|</div>
+                <a href="resultACEvaluate.html" class="body-header-menu-item" style="margin-left: 15px;">KPI</a>
+                <div class="separator">|</div>
+                <div class="navbar-header-dropdown body-header-user-info">
+                    <button class="navbar-header-dropbtn" id="body-header-user-info-button">
+                        <span style="float: left;">Full name &nbsp; </span>
+                        <img class="rounded-circle" src="../img/user.png" width="40vh" height="40vh" style="float: left;" />
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="navbar-header-dropdown-content body-header-user-info-dropdown">
+                        <a href="#">Profile</a>
+                        <a href="../login.html">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="body-header-search">
+            <input type="text" placeholder="Search" id="body-header-search-input">
+        </div>
+    </div>
+    <div id="body-content">
+        <div id="body-content-candidate-table" class="shadow p-3 mb-5 bg-white rounded" style="margin-left: 8%; width: 84%; margin-top: 3vh; ">
+            <div id="body-content-table-title">
+                <h3>List Teachers </h3>
+
+            </div>
+            <div class="active-pink-4 mb-4" id="body-content-table-search">
+                <input class="form-control" id="body-content-table-search-field" type="text" placeholder="Search" aria-label="Search">
+            </div>
+            <table class="table table-hover" id="table-list-teacher">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Nationality</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody id="table-info">
+                    <tr data-toggle="modal" data-target="#myModal">
+                        <th scope="row">1</th>
+                        <td>James George</td>
+                        <td>Canada</td>
+                        <td>Rory@gmail.com</td>
+                        <td id="table-status-pending">Pending</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Elizabeth Rodriguez</td>
+                        <td>Canada</td>
+                        <td>Corbin@gmail.com</td>
+                        <td id="table-status-pending">Pending</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Jennifer Martinez</td>
+                        <td>New Zealand</td>
+                        <td>Elias@gmail.com</td>
+                        <td id="table-status-pending">Pending</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>William Taylor</td>
+                        <td>Canada</td>
+                        <td>Otis@gmail.com</td>
+                        <td id="table-status-done">Done</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Maria Hernandez</td>
+                        <td>Ireland</td>
+                        <td>Bernie@gmail.com</td>
+                        <td id="table-status-done">Done</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>Jennifer Martinez</td>
+                        <td>New Zealand</td>
+                        <td>Elias@gmail.com</td>
+                        <td id="table-status-done">Done</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td>Mark</td>
+                        <td>Canada</td>
+                        <td>Finn@gmail.com</td>
+                        <td id="table-status-done">Done</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">8</th>
+                        <td>William Taylor</td>
+                        <td>Canada</td>
+                        <td>Otis@gmail.com</td>
+                        <td id="table-status-done">Done</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">9</th>
+                        <td>James Smith</td>
+                        <td>UK</td>
+                        <td>Beckham@gmail.com</td>
+                        <td id="table-status-done">Done</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Teacher Evaluate</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div id="body-content-evaluate-teacher-form" class="shadow p-3 mb-5 bg-white rounded">
+                            <div id="body-content-evaluate-teacher-form-title">
+                                <h3 style="text-align: center;">EVALUATE for NATIVE TEACHER</h3>
+                            </div>
+                            <div id="body-content-evaluate-teacher-form-info" style="float: left; width: 100%;">
+                                <div id="body-content-evaluate-teacher-form-img"><img src="../img/img_avatar.png" alt="Avatar" class="avatar">
+                                </div>
+                                <div id="body-content-evaluate-teacher-form-content" style="font-size: 1.2em; margin-left: 16.5vh;">
+                                    Teacher's name: James George</div>
+                                </br>
+                                <div id="body-content-evaluate-teacher-form-content" style=" float: left; font-size: 1.2em;
+                                    margin-top: -4vh; margin-left: 2vh;">Month: 24/12/2020</div>
+                                </br>
+                                <div id="body-content-evaluate-teacher-form-content" style=" float: left; font-size: 1.2em;
+                                    margin-top: -3vh; margin-left: 2vh;">Status: <span style="color: rgb(240, 207, 23); font-weight: bold;">Pending</span></div>
+                            </div>
+                            <div id="body-content-evaluate-teacher-form-evaluate">
+                                <table class="table table-bordered" id="table-evaluate">
+                                    <thead>
+                                        <tr style="background-color: rgb(204, 204, 204);">
+                                            <!-- <th class="col-info" id="col-info-1" scope="col">Score</th> -->
+                                            <th class="col-info" id="col-info-2" scope="col" colspan="4">COMPANY POLICY</th>
+                                            <th class="col-info" id="col-info-3" scope="col">NOTE</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr style="background-color: rgb(249, 249, 249);">
+                                            <th colspan="2">WORKING ATTITUDE ( 50 PTS)</th>
+                                            <th>Minus points</th>
+                                            <th>Bonus points</th>
+                                            <th></th>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">* Lateness (with notice)</td>
+                                            <td>
+                                                <form>
+                                                    <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+                                                    <input type="number" id="number" class="number" value="0" />
+                                                    <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+                                                    </br>
+                                                    <span style="font-size: 0.9em;">5 pts/time</span>
+                                                </form>
+                                            </td>
+                                            <td></td>
+                                            <td><textarea class="form-control" aria-label="With textarea"></textarea></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">* Lateness (without notice)</td>
+                                            <td>
+                                                <div>
+                                                    <form>
+                                                        <div class="value-button" id="decrease" onclick="decreaseValue1()" value="Decrease Value">-</div>
+                                                        <input type="number" id="number1" class="number" value="0" />
+                                                        <div class="value-button" id="increase" onclick="increaseValue1()" value="Increase Value">+</div>
+                                                        </br>
+                                                        <span style="font-size: 0.9em;">15 pts/time</span>
+                                                    </form>
+                                                </div>
+                                            </td>
+                                            <td></td>
+                                            <td><textarea class="form-control" aria-label="With textarea"></textarea></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">* Absent without notice</td>
+                                            <td>
+                                                <div>
+                                                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        0pts
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item" href="#">50 pts </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td></td>
+                                            <td><textarea class="form-control" aria-label="With textarea"></textarea></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">* Sick off (without doctor sick notes)</td>
+                                            <td>
+                                                <form>
+                                                    <div class="value-button" id="decrease" onclick="decreaseValue2()" value="Decrease Value">-</div>
+                                                    <input type="number" id="number2" class="number" value="0" />
+                                                    <div class="value-button" id="increase" onclick="increaseValue2()" value="Increase Value">+</div>
+                                                    </br>
+                                                    <span style="font-size: 0.9em;">10 pts/day</span>
+                                                </form>
+                                            </td>
+                                            <td></td>
+                                            <td><textarea class="form-control" aria-label="With textarea"></textarea></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">* Incompatible Dress Code</td>
+                                            <td>
+                                                <form>
+                                                    <div class="value-button" id="decrease" onclick="decreaseValue3()" value="Decrease Value">-</div>
+                                                    <input type="number" id="number3" class="number" value="0" />
+                                                    <div class="value-button" id="increase" onclick="increaseValue3()" value="Increase Value">+</div>
+                                                    </br>
+                                                    <span style="font-size: 0.9em;">5 pts/time</span>
+                                                </form>
+                                            </td>
+                                            <td></td>
+                                            <td><textarea class="form-control" aria-label="With textarea"></textarea></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">* Bad attitude towards colleague/ co-teachers/ TAs/ students</td>
+                                            <td>
+                                                <form>
+                                                    <div class="value-button" id="decrease" onclick="decreaseValue4()" value="Decrease Value">-</div>
+                                                    <input type="number" id="number4" class="number" value="0" />
+                                                    <div class="value-button" id="increase" onclick="increaseValue4()" value="Increase Value">+</div>
+                                                    </br>
+                                                    <span style="font-size: 0.9em;">10 pts/time</span>
+                                                </form>
+                                            </td>
+                                            <td></td>
+                                            <td><textarea class="form-control" aria-label="With textarea"></textarea></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">* Achieve 6 short notice subbing hours</td>
+                                            <td></td>
+                                            <td>
+                                                <div>
+                                                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        0pts
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item" href="#">10 pts </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><textarea class="form-control" aria-label="With textarea"></textarea></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">* No offence</td>
+                                            <td></td>
+                                            <td>
+                                                <div>
+                                                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        0pts
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item" href="#">10 pts</a>
+
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><textarea class="form-control" aria-label="With textarea"></textarea></td>
+                                        </tr>
+                                        <tr style="background-color: rgb(249, 249, 249);">
+                                            <th colspan="2">TEACHING PERFORMANCE (50 PTs)</th>
+                                            <th>Minus points</th>
+                                            <th>Bonus points</th>
+                                            <th></th>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">* Receive the complaints from the school about Teaching performance with confirmation between 3 parties of Native teacher - School - Major</td>
+                                            <td>
+                                                <form>
+                                                    <div class="value-button" id="decrease" onclick="decreaseValue5()" value="Decrease Value">-</div>
+                                                    <input type="number" id="number5" class="number" value="0" />
+                                                    <div class="value-button" id="increase" onclick="increaseValue5()" value="Increase Value">+</div>
+                                                    </br>
+                                                    <span style="font-size: 0.9em;">5 pts/time</span>
+                                                </form>
+                                            </td>
+                                            <td></td>
+                                            <td><textarea class="form-control" aria-label="With textarea"></textarea></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">* Achieve 6 short notice subbing hours</td>
+                                            <td></td>
+                                            <td>
+                                                <div>
+                                                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        0pts
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item" href="#">10 pts </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><textarea class="form-control" aria-label="With textarea"></textarea></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" style="vertical-align : middle;text-align:center; font-weight: bold;">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">OTHER COMMENTS (if any)</span>
+                                                    </div>
+                                                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div id="body-content-evaluate-teacher-form-suubmit">
+                            <button type="button" class="btn btn-primary btn-lg" style="float: right; margin-top: -3vh; margin-right: 7.2vh;" onClick="window.location.reload();">Submit evaluate</button>
+                        </div>
+                        <div id="body-content-evaluate-teacher-form-suubmit">
+                            <button type="button" class="btn btn-primary btn-lg" style="float: right; margin-top: -3vh; margin-right: 5vh;" onClick="window.location.reload();">Update evaluate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="body-footer">
+        <div id="body-footer-quicklink" class="body-footer-div">
+            <div class="body-footer-title">Quick Links</div>
+            <div class="body-footer-content">
+                <a href="http://major.vn/#top">About Us</a><br>
+                <a href="http://major.vn/#top">Terms of use</a><br>
+                <a href="http://major.vn/#top">FAQ</a><br>
+                <a href="http://major.vn/#top">Support</a>
+            </div>
+        </div>
+        <div id="body-footer-followus" class="body-footer-div">
+            <div class="body-footer-title">Follow Us</div>
+            <div class="body-footer-content">
+                <a href="https://www.facebook.com/majorsel" class="fa fa-facebook"><span>Facebook</span></a>
+            </div>
+        </div>
+        <div id="body-footer-contact" class="body-footer-div-contact">
+            <div class="body-footer-title">Contact</div>
+            <div class="body-footer-content">
+                <span>Head Quarter: 269A Nguyen Trong Tuyen Street, Ward 10, District Phu Nhuan, HCM City, Viet
+                    Nam</span>
+                <span>Branch 2 : 160/72 Phan Huy Ich Street, Ward 12, Go Vap District, HCM City, Viet Nam</span>
+                <span>Email: hungtien@truongvietanh.com.</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

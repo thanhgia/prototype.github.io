@@ -1,0 +1,145 @@
+#body-content-number-teacher-item {
+    width: 17%;
+    height: 15vh;
+    float: left;
+    margin-top: 2.5vh;
+    margin-left: 12.5vh;
+}
+
+#body-content-number-teacher-item-word {
+    color: #aaa;
+    float: left;
+}
+
+#body-content-number-teacher-item-info {
+    font-size: 1.5em;
+    float: left;
+}
+
+#body-content-number-teacher-item-status {
+    float: right;
+    height: 90%;
+    margin-top: -3.5vh;
+    border-radius: 25px;
+}
+
+#body-content-table-title {
+    float: left;
+}
+
+#body-content-table-search {
+    float: right;
+}
+
+#body-content-candidate-table {
+    float: left;
+    margin-top: -1.5vh;
+    margin-left: 12.7vh;
+    width: 86%;
+}
+
+#table-status-pending {
+    color: rgb(240, 207, 23);
+    font-weight: bold;
+}
+
+#table-status-done {
+    color: rgb(8, 182, 37);
+    font-weight: bold;
+}
+
+#body-content-evaluate-teacher-form {
+    float: left;
+    margin-left: 8vh;
+    width: 91.6%;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+}
+
+#body-content-evaluate-teacher-form-img {
+    float: left;
+}
+
+#body-content-evaluate-teacher-form-evaluate {
+    float: left;
+    margin-top: 2vh;
+    width: 100%;
+}
+
+.col-info {
+    text-align: center;
+}
+
+#col-info-1 {
+    width: 10%;
+}
+
+#col-info-2 {
+    width: 60%;
+}
+
+#col-info-3 {
+    width: 15%;
+}
+
+#col-info-4 {
+    width: 15%;
+}
+
+.value-button {
+    display: inline-block;
+    border: 0.2vh solid #ddd;
+    margin: 0vh;
+    width: 3.4vh;
+    height: 4vh;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0vh 0;
+    background: rgba(223, 28, 21, 0.829);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.value-button:hover {
+    cursor: pointer;
+}
+
+form #decrease {
+    margin-right: -0.2vh;
+    border-radius: 0.8vh 0 0 0.8vh;
+}
+
+form #increase {
+    margin-left: -0.2vh;
+    border-radius: 0 0.8vh 0.8vh 0;
+}
+
+form #input-wrap {
+    margin: 0vh;
+    padding: 0vh;
+}
+
+input.number {
+    text-align: center;
+    border: none;
+    /* // border-top: 0.1vh solid #ddd; */
+    border-bottom: 0.1vh solid #ddd;
+    margin: 0vh;
+    width: 3.5vh;
+    height: 5vh;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

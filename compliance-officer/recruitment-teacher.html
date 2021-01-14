@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show CV</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+        } );
+    </script>
+    <script>
+        function showProfile() {
+            window.location.href = "recruitment-progress.html";
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
+</head>
+
+<body> 
+    <div id="body-header">
+        <div id="body-header-info">
+            <div id="body-header-logo">
+                <img id="body-header-logo-img" src="../img/Major-logo.png" />
+            </div>
+            <div id="body-header-menu-list-menu" style="width: 40%;">
+                <a href="homepage-officer.html" class="body-header-menu-item">Home</a>
+                <div class="separator">|</div>
+                <a href=".html" class="body-header-menu-item" style="margin-left: 20px;">Recruitment teacher</a>
+                <div class="separator">|</div>
+                <div class="navbar-header-dropdown body-header-user-info">
+                    <button class="navbar-header-dropbtn" id="body-header-user-info-button">
+                        <span style="float: left;">Full name &nbsp; </span>
+                        <img class="rounded-circle" src="../img/user.png" width="40vh" height="40vh" style="float: left;" />
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="navbar-header-dropdown-content body-header-user-info-dropdown">
+                        <a href="#">Profile</a>
+                        <a href="../login.html">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="body-header-search">
+            <input type="text" placeholder="Search" id="body-header-search-input">
+        </div>
+    </div>
+    <div id="newCV-body">
+        <div id="body-content-new-candidate-table" class="shadow p-3 mb-5 bg-white rounded main-table">
+            <div id="body-content-table-title">
+                <h5>List teachers</h5>
+            </div>
+            <table class="table table-hover" id="example">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Nationality</th>
+                        <th scope="col">Progress</th>
+                        <th scope="col">Deadline</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr onclick="showProfile()">
+                        <th scope="row">1</th>
+                        <td>Ryan Jacob</td>
+                        <td>UK</td>
+                        <td>Prepare procedure</td>
+                        <td>22/12/2020</td>
+                    </tr>
+                    <tr onclick="showProfile()">
+                        <th scope="row">2</th>
+                        <td>Gary Nicholas</td>
+                        <td>Ireland</td>
+                        <td>Prepare procedure</td>
+                        <td>22/12/2020</td>
+                    </tr>
+                    <tr onclick="showProfile()">
+                        <th scope="row">3</th>
+                        <td>Diane Julie</td>
+                        <td>Scotland</td>
+                        <td>In Viet Nam</td>
+                        <td>22/12/2020</td>
+                    </tr>
+                    <tr onclick="showProfile()">
+                        <th scope="row">4</th>
+                        <td>Eric Jonathan</td>
+                        <td>US</td>
+                        <td>In Viet Nam</td>
+                        <td>22/12/2020</td>
+                    </tr>
+                    <tr onclick="showProfile()">
+                        <th scope="row">5</th>
+                        <td>Laura Sharon</td>
+                        <td>Canada</td>
+                        <td>In Viet Nam</td>
+                        <td>22/12/2020</td>
+                    </tr>
+                    <tr onclick="showProfile()">
+                        <th scope="row">6</th>
+                        <td>Stephanie Rebecca</td>
+                        <td>New Zealand</td>
+                        <td>In Viet Nam</td>
+                        <td>22/12/2020</td>
+                    </tr>
+                    <tr onclick="showProfile()">
+                        <th scope="row">7</th>
+                        <td>Jack Patrick</td>
+                        <td>Australia</td>
+                        <td>Prepare procedure</td>
+                        <td>22/12/2020</td>
+                    </tr>
+                    <tr onclick="showProfile()">
+                        <th scope="row">8</th>
+                        <td>Ruth Christine</td>
+                        <td>South Africa</td>
+                        <td>Prepare procedure</td>
+                        <td>22/12/2020</td>
+                    </tr>
+                    <tr onclick="showProfile()">
+                        <th scope="row">9</th>
+                        <td>Jerry Tyler</td>
+                        <td>Ireland</td>
+                        <td>Prepare procedure</td>
+                        <td>22/12/2020</td>
+                    </tr>
+                    <tr onclick="showProfile()">
+                        <th scope="row">10</th>
+                        <td>Jose Henry</td>
+                        <td>Canada</td>
+                        <td>Prepare procedure</td>
+                        <td>22/12/2020</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="body-footer">
+        <div id="body-footer-quicklink" class="body-footer-div">
+            <div class="body-footer-title">Quick Links</div>
+            <div class="body-footer-content">
+                <a href="http://major.vn/#top">About Us</a><br>
+                <a href="http://major.vn/#top">Terms of use</a><br>
+                <a href="http://major.vn/#top">FAQ</a><br>
+                <a href="http://major.vn/#top">Support</a>
+            </div>
+        </div>
+        <div id="body-footer-followus" class="body-footer-div">
+            <div class="body-footer-title">Follow Us</div>
+            <div class="body-footer-content">
+                <a href="https://www.facebook.com/majorsel" class="fa fa-facebook"><span>Facebook</span></a>
+            </div>
+        </div>
+        <div id="body-footer-contact" class="body-footer-div-contact">
+            <div class="body-footer-title">Contact</div>
+            <div class="body-footer-content">
+                <span>Head Quarter: 269A Nguyen Trong Tuyen Street, Ward 10, District Phu Nhuan, HCM City, Viet Nam</span>
+                <span>Branch 2 : 160/72 Phan Huy Ich Street, Ward 12, Go Vap District, HCM City, Viet Nam</span>
+                <span>Email: hungtien@truongvietanh.com.</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

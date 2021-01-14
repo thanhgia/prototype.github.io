@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Teacher Report</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/acpage.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script>
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            var header = document.getElementById("body-header");
+            var sticky = header.offsetTop;
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+
+        $(document).ready(function() {
+            $("#body-content-table-search-field").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#table-info tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="body-header">
+        <div id="body-header-info">
+            <div id="body-header-logo">
+                <img id="body-header-logo-img" src="../img/Major-logo.png" />
+            </div>
+            <div id="body-header-menu-list-menu">
+                <a href="qualitypage.html" class="body-header-menu-item" style="margin-left: 19vh;">AC</a>
+                <div class="separator">|</div>
+                <a href="QualitySupervisor.html" class="body-header-menu-item" style="margin-left: 15px;">Teacher</a>
+                <div class="separator">|</div>
+                <div class="navbar-header-dropdown body-header-user-info">
+                    <button class="navbar-header-dropbtn" id="body-header-user-info-button">
+                        <span style="float: left;">Full name &nbsp; </span>
+                        <img class="rounded-circle" src="../img/user.png" width="40vh" height="40vh" style="float: left;" />
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="navbar-header-dropdown-content body-header-user-info-dropdown">
+                        <a href="#">Profile</a>
+                        <a href="../login.html">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="body-header-search">
+            <input type="text" placeholder="Search" id="body-header-search-input">
+        </div>
+    </div>
+    <div id="body-content">
+        <div id="body-content-candidate-table" class="shadow p-3 mb-5 bg-white rounded" style="margin-left: 8%; width: 84%; margin-top: 3vh; ">
+            <div id="body-content-table-title">
+                <h3>List Teacher's Report </h3>
+
+            </div>
+            <div class="active-pink-4 mb-4" id="body-content-table-search">
+                <input class="form-control" id="body-content-table-search-field" type="text" placeholder="Search" aria-label="Search">
+            </div>
+            <table class="table table-hover" id="table-list-teacher">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Nationality</th>
+                        <th scope="col">Email</th>
+
+                    </tr>
+                </thead>
+                <tbody id="table-info">
+                    <tr data-toggle="modal" data-target="#myModal">
+                        <th scope="row">1</th>
+                        <td>James George</td>
+                        <td>Canada</td>
+                        <td>Rory@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Elizabeth Rodriguez</td>
+                        <td>Canada</td>
+                        <td>Corbin@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Jennifer Martinez</td>
+                        <td>New Zealand</td>
+                        <td>Elias@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>William Taylor</td>
+                        <td>Canada</td>
+                        <td>Otis@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Maria Hernandez</td>
+                        <td>Ireland</td>
+                        <td>Bernie@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>Jennifer Martinez</td>
+                        <td>New Zealand</td>
+                        <td>Elias@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td>Mark</td>
+                        <td>Canada</td>
+                        <td>Finn@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">8</th>
+                        <td>William Taylor</td>
+                        <td>Canada</td>
+                        <td>Otis@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">9</th>
+                        <td>James Smith</td>
+                        <td>UK</td>
+                        <td>Beckham@gmail.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Report</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div id="body-content-form-info-ac" class="shadow p-3 mb-5 bg-white rounded">
+                            <table class="table table-bordered" id="table-evaluate">
+                                <thead>
+                                    <tr>
+
+                                        <th colspan="4" class="col-info" id="col-info-1" scope="col" style="text-align: center;">AC’s EVALUATION FORM</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 15%; background-color: whitesmoke;">SCHOOL</td>
+                                        <td colspan="3" style="text-align: center;">Major Education</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 15%; background-color: whitesmoke;">AC’s NAME</td>
+                                        <td style="text-align: center;">Beckham</td>
+                                        <td style="width: 15%; background-color: whitesmoke;">Date</td>
+                                        <td style="text-align: center;">24/12/2020</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 15%; background-color: whitesmoke;">TEACHER</td>
+                                        <td style="text-align: center;">John</td>
+                                        <td style="width: 15%; background-color: whitesmoke;">JOB STATUS</td>
+                                        <td style="text-align: center;"></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            <table class="table table-bordered" id="table-evaluate">
+                                <thead>
+                                    <tr>
+
+                                        <th colspan="6" class="col-info" id="col-info-1" scope="col" style="text-align: center;">
+                                            CRITERIA</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="2" style="width: 30%; text-align: center; vertical-align : middle; background-color: whitesmoke;">
+                                            CRITERIA</td>
+                                        <td colspan="5" style="text-align: center; background-color: whitesmoke;">
+                                            SCORE
+                                        </td>
+                                        <tr>
+                                            <td style="width: 12%; text-align: center;">Bad</td>
+                                            <td style="width: 12%; text-align: center;">Average</td>
+                                            <td style="width: 12%; text-align: center;">Good</td>
+                                            <td style="width: 12%; text-align: center;">Excellent</td>
+                                            <td style="text-align: center;">Note</td>
+                                        </tr>
+                                    </tr>
+                                    <tr>
+                                        <td>1. Response for the email within 24 hours</td>
+                                        <td style=" vertical-align : middle; text-align: center;">
+                                            <div class="radio">
+                                                <label><input type="radio" name="optradio" checked disabled></label>
+                                            </div>
+                                        </td>
+                                        <td style=" vertical-align : middle; text-align: center;">
+                                            <div class="radio">
+                                                <label><input type="radio" name="optradio" checked disabled></label>
+                                            </div>
+                                        </td>
+                                        <td style=" vertical-align : middle; text-align: center;">
+                                            <div class="radio">
+                                                <label><input type="radio" name="optradio" checked disabled></label>
+                                            </div>
+                                        </td>
+                                        <td style=" vertical-align : middle; text-align: center;">
+                                            <div class="radio">
+                                                <label><input type="radio" name="optradio" checked disabled></label>
+                                            </div>
+                                        </td>
+                                        <td><textarea class="form-control" aria-label="With textarea" disabled></textarea></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>2. Academic support</td>
+                                        <td style=" vertical-align : middle; text-align: center;">
+                                            <div class="radio">
+                                                <label><input type="radio" name="optradio2" checked disabled></label>
+                                            </div>
+                                        </td>
+                                        <td style=" vertical-align : middle; text-align: center;">
+                                            <div class="radio">
+                                                <label><input type="radio" name="optradio2" checked disabled></label>
+                                            </div>
+                                        </td>
+                                        <td style=" vertical-align : middle; text-align: center;">
+                                            <div class="radio">
+                                                <label><input type="radio" name="optradio2" checked disabled></label>
+                                            </div>
+                                        </td>
+                                        <td style=" vertical-align : middle; text-align: center;">
+                                            <div class="radio">
+                                                <label><input type="radio" name="optradio2"  disabled></label>
+                                            </div>
+                                        </td>
+                                        <td><textarea class="form-control" aria-label="With textarea" disabled></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3. Proficient method to solve the Academic problems</td>
+                                        <td style=" vertical-align : middle; text-align: center;">
+                                            <div class="radio">
+                                                <label><input type="radio" name="optradio3" checked disabled></label>
+                                            </div>
+                                        </td>
+                                        <td style=" vertical-align : middle; text-align: center;">
+                                            <div class="radio">
+                                                <label><input type="radio" name="optradio3" checked disabled></label>
+                                            </div>
+                                        </td>
+                                        <td style=" vertical-align : middle; text-align: center;">
+                                            <div class="radio">
+                                                <label><input type="radio" name="optradio3" checked disabled></label>
+                                            </div>
+                                        </td>
+                                        <td style=" vertical-align : middle; text-align: center;">
+                                            <div class="radio">
+                                                <label><input type="radio" name="optradio3" checked disabled></label>
+                                            </div>
+                                        </td>
+                                        <td><textarea class="form-control" aria-label="With textarea" disabled></textarea></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">OTHER COMMENTS (if any)</span>
+                                </div>
+                                <textarea class="form-control" aria-label="With textarea" disabled>Good evaluate</textarea>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="body-footer">
+        <div id="body-footer-quicklink" class="body-footer-div">
+            <div class="body-footer-title">Quick Links</div>
+            <div class="body-footer-content">
+                <a href="http://major.vn/#top">About Us</a><br>
+                <a href="http://major.vn/#top">Terms of use</a><br>
+                <a href="http://major.vn/#top">FAQ</a><br>
+                <a href="http://major.vn/#top">Support</a>
+            </div>
+        </div>
+        <div id="body-footer-followus" class="body-footer-div">
+            <div class="body-footer-title">Follow Us</div>
+            <div class="body-footer-content">
+                <a href="https://www.facebook.com/majorsel" class="fa fa-facebook"><span>Facebook</span></a>
+            </div>
+        </div>
+        <div id="body-footer-contact" class="body-footer-div-contact">
+            <div class="body-footer-title">Contact</div>
+            <div class="body-footer-content">
+                <span>Head Quarter: 269A Nguyen Trong Tuyen Street, Ward 10, District Phu Nhuan, HCM City, Viet
+                    Nam</span>
+                <span>Branch 2 : 160/72 Phan Huy Ich Street, Ward 12, Go Vap District, HCM City, Viet Nam</span>
+                <span>Email: hungtien@truongvietanh.com.</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

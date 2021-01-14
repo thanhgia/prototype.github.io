@@ -1,0 +1,985 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f9f9f9;
+    min-width: 97vh;
+    min-height: 97vh;
+}
+
+button {
+    font-size: inherit;
+}
+
+
+/*Login page*/
+
+#login {
+    min-height: 97vh;
+    min-width: 97vh;
+    z-index: 0;
+}
+
+#login-body {
+    z-index: 10;
+    min-height: 80vh;
+    min-width: 80%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px lightblue;
+}
+
+#login-body-left {
+    float: left;
+    background-image: linear-gradient(to right, #3353b3, #3557BC);
+    min-height: 80vh;
+    min-width: 70%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#login-body-right {
+    float: left;
+    min-height: 100%;
+    min-width: 30%;
+    margin: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#login-body-left-content {
+    color: azure;
+    height: auto;
+    width: auto;
+    position: relative;
+    top: 20vh;
+    left: 15vh;
+    right: 45vh;
+}
+
+#login-body-left-content_firstline {
+    font-size: 2em;
+    font-weight: 100;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    opacity: 30%;
+    line-height: 2;
+}
+
+#login-body-left-content_secondline {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.2em;
+    line-height: 1.5;
+}
+
+#login-body-left-content_thirdline {
+    opacity: 80%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 0.9em;
+}
+
+#login-body-left-image_firstimg {
+    width: 50vh;
+    height: 60vh;
+    float: right;
+}
+
+#login-body-right-logo {
+    float: right;
+}
+
+#login-body-logo {
+    margin-top: 10px;
+    margin-right: 10px;
+    height: 40px;
+    width: 40px;
+}
+
+#login-title {
+    color: #22acf0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 550;
+    font-size: 1.2em;
+}
+
+#login-input {
+    padding-top: 20px;
+}
+
+#login-body-right-loginform {
+    margin-top: 43%;
+    margin-left: 10%;
+}
+
+.login-input-field {
+    padding-left: 30px;
+    height: 25px;
+    width: 75%;
+    outline: none;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid #aaa;
+    margin-bottom: 20px;
+}
+
+#login-input-username {
+    position: relative;
+}
+
+#login-input-username i {
+    color: #aaa;
+    position: absolute;
+    left: 3px;
+    top: 5px;
+}
+
+#login-input-password {
+    position: relative;
+}
+
+#login-input-password i {
+    color: #aaa;
+    position: absolute;
+    left: 3px;
+    top: 5px;
+}
+
+.login-input-field:focus {
+    border-color: #22acf0;
+}
+
+#login-input-username input[type=text]:focus+i {
+    color: #22acf0;
+}
+
+#login-input-password input[type=password]:focus+i {
+    color: #22acf0;
+}
+
+#login-button {
+    background-color: #22acf0;
+    width: 87%;
+    height: 30px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    color: white;
+}
+
+#login-button:hover {
+    background-color: #3557BC;
+}
+
+#login-createCv {
+    margin-top: 25px;
+    font-size: 0.9em;
+    width: 87%;
+    text-align: center;
+}
+
+
+/*Create CV page*/
+
+#createcv-pannel {
+    height: 130px;
+    width: 100%;
+    background-color: #253b80;
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    float: left;
+}
+
+#createcv-pannel-image {
+    height: 70px;
+    width: 270px;
+    margin-top: 30px;
+    margin-left: 14%;
+}
+
+#createcv-body {
+    float: left;
+    min-height: 97vh;
+    width: 72%;
+    margin-left: 14%;
+    margin-top: 160px;
+}
+
+#createCv-left-menu {
+    width: 25%;
+    float: left;
+}
+
+.createCv-left-menu-button {
+    width: 100%;
+    height: 37px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    text-align: left;
+    outline: none;
+    border: 0.5px solid lightgray;
+    background-image: linear-gradient(to bottom, white, #e7e7e7);
+    font-size: 0.9em;
+}
+
+.createCv-left-menu-button:hover {
+    color: #22acf0;
+}
+
+.createCv-left-menu-button:focus {
+    color: white;
+    background-image: linear-gradient(to bottom, #22acf0, #22acf0);
+}
+
+#createCv-right {
+    width: 75%;
+    float: left;
+}
+
+#createCv-right-iframe {
+    float: left;
+    width: 98%;
+    height: 75vh;
+    border: 00.5px solid lightgray;
+}
+
+#createCv-submit {
+    float: left;
+    margin-top: 20px;
+    margin-left: 90%;
+}
+
+#createCv-submit-button {
+    font-size: 1.02em;
+    outline: none;
+    border: 0.5px solid #ddd;
+    height: 35px;
+    width: 90px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, white, #f0f0f0);
+}
+
+#createCv-submit-button:hover {
+    background-image: linear-gradient(to bottom, #30b1f1, #22acf0);
+    color: white;
+    cursor: pointer;
+}
+
+
+/*basic informantion page*/
+
+.compulsory {
+    color: red;
+}
+
+.createCv-iframe-page {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.createCv-iframe-title {
+    font-size: 1.2em;
+    float: left;
+    width: 100%;
+}
+
+#basicInfo-main-right {
+    float: left;
+    width: 50%;
+    height: 46%;
+    margin-top: 15px;
+}
+
+.basicInfo-div-title {
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+#basicInfo-image {
+    float: left;
+    width: 50%;
+    height: 46%;
+    margin-top: 15px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.createCv-drop-zone-basicInfo {
+    width: 30%;
+    height: 60%;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    color: #cccccc;
+    border: 4px dashed #009578;
+    border-radius: 10px;
+    margin-top: 2%;
+    margin-left: 22%;
+}
+
+.basicInfo-div {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.basicInfo-input {
+    background-image: linear-gradient(to bottom, white, #f0f0f0);
+    height: 30px;
+    width: 92%;
+    border: 0.5px solid lightgray;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.basicInfo-input-right {
+    background-image: linear-gradient(to bottom, white, #f0f0f0);
+    height: 30px;
+    width: 92%;
+    border: 0.5px solid lightgray;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/*qualification page*/
+
+#qualification-edu {
+    margin-top: 7%;
+    height: 37%;
+}
+
+.createCv-iframe-border {
+    width: 96%;
+    height: 1px;
+    border-bottom: 0.5px solid #ddd;
+}
+
+.qualification-page-div {
+    width: 33%;
+    float: left;
+}
+
+.qualification-page-checkbox {
+    margin-left: 40px;
+}
+
+
+/*uploadCv page*/
+
+#uploadcv-image-choose {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.createCv-drop-zone {
+    max-width: 200px;
+    height: 200px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    color: #cccccc;
+    border: 4px dashed #009578;
+    border-radius: 10px;
+    margin-top: 13%;
+    margin-left: 28%;
+}
+
+.createCv-drop-zone--over {
+    border-style: solid;
+}
+
+.createCv-drop-zone__input {
+    display: none;
+}
+
+.createCv-drop-zone__thumb {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #cccccc;
+    background-size: cover;
+    position: relative;
+}
+
+.createCv-drop-zone__thumb::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.75);
+    font-size: 14px;
+    text-align: center;
+}
+
+
+/* home page */
+
+#body-header {
+    min-width: 100%;
+    height: 20vh;
+    position: fixed;
+    float: left;
+    z-index: 1;
+}
+
+#body-header-info {
+    min-width: 100%;
+    height: 13vh;
+    background-color: #6a83d1;
+    float: left;
+}
+
+#body-header-search {
+    min-width: 100%;
+    height: 7vh;
+    background-color: #3554b3;
+    float: left;
+}
+
+#body-header-logo {
+    margin-left: 8%;
+    float: left;
+}
+
+#body-header-logo-img {
+    height: 60px;
+    width: 250px;
+    margin-top: 1.5vh;
+}
+
+#body-header-menu-list-menu {
+    width: 38%;
+    list-style: none;
+    float: right;
+    height: 13vh;
+}
+
+.body-header-menu-item {
+    float: left;
+    color: azure;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.1em;
+    float: left;
+    margin-top: 3.2vh;
+    margin-right: 3vh;
+}
+
+.body-header-menu-item:hover {
+    text-decoration: none;
+    background-color: #ddd;
+}
+
+.navbar-header {
+    overflow: hidden;
+    width: 70%;
+    float: left;
+    margin-top: 3.5vh;
+}
+
+.navbar-header a {
+    float: left;
+    font-size: 1.1em;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar-header-dropdown {
+    float: left;
+    overflow: hidden;
+    margin-top: 3.2vh;
+    margin-right: 3vh;
+    margin-left: 3vh;
+}
+
+.navbar-header-dropdown .navbar-header-dropbtn {
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    font-family: inherit;
+    font-size: 1.1em;
+}
+
+.navbar-header a:hover,
+.navbar-header-dropdown:hover .navbar-header-dropbtn {
+    background-color: #ddd;
+    color: #0056b3;
+}
+
+.navbar-header-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    font-size: 0.85em;
+}
+
+.navbar-header-dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.navbar-header-dropdown-content a:hover {
+    background-color: #ddd;
+    text-decoration: none;
+    color: #0056b3;
+}
+
+.navbar-header-dropdown:hover .navbar-header-dropdown-content {
+    display: block;
+}
+
+.separator {
+    width: 0.5%;
+    height: inherit;
+    float: left;
+    margin-top: 3.2vh;
+}
+
+#body-header-user-info-button {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: azure;
+    width: 100%;
+}
+
+.body-header-user-info:hover {
+    color: #0056b3;
+}
+
+#body-header-user-info-button:hover {
+    background-color: #ddd;
+    text-decoration: none;
+    color: #0056b3;
+}
+
+.rounded-circle {
+    margin-top: -1vh;
+    float: left;
+}
+
+.body-header-user-info-dropdown a {
+    font-size: 1.15em;
+}
+
+#body-header-search input {
+    float: right;
+    width: 15%;
+    margin-top: 0.5vh;
+    margin-right: 8%;
+    height: 6vh;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: #013770;
+}
+
+
+/* body-content */
+
+#body-content {
+    width: 100%;
+    min-height: 100vh;
+    float: left;
+    margin-top: 23vh;
+}
+
+#body-content-cadidate-table {
+    width: 53%;
+    float: left;
+    z-index: 10;
+    margin-top: 2vh;
+    margin-left: 7%;
+    border: 0.5px solid #466fe977;
+    box-sizing: border-box;
+}
+
+#body-content-cadidate-table tr {
+    cursor: pointer;
+}
+
+#body-content-anoumence {
+    width: 31%;
+    float: left;
+    margin: 2vh;
+    border: 0.5px solid #466fe977;
+}
+
+#body-content-anoumence-daily {
+    width: 31%;
+    float: left;
+    margin: 2vh;
+    margin-top: -3.5vh;
+    border: 0.5px solid #466fe977;
+}
+
+#body-content-hr-info-quality {
+    width: 42%;
+    float: left;
+    margin-left: 7%;
+    margin-top: -2vh;
+    border: 0.5px solid #466fe977;
+}
+
+#body-content-hr-info-recruitment {
+    width: 42%;
+    float: left;
+    margin-left: 2vh;
+    margin-top: -2vh;
+    border: 0.5px solid #466fe977;
+}
+
+
+/* scrolling */
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+/*body footer*/
+
+#body-footer {
+    float: left;
+    height: 30vh;
+    width: 100%;
+    background-color: #3554b3;
+    padding-left: 7%;
+    padding-top: 1%;
+}
+
+.body-footer-div {
+    width: 25%;
+    float: left;
+}
+
+.body-footer-div-contact {
+    width: 40%;
+    float: left;
+}
+
+.body-footer-title {
+    font-size: 1.5em;
+    color: white;
+}
+
+.body-footer-content a {
+    color: white;
+    margin-top: 8px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.body-footer-content a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.body-footer-content .fa-facebook {
+    font-size: 25px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    margin: 5px 2px;
+    color: #3B5998;
+    background: white;
+    border-radius: 50%;
+    padding: 5px;
+    position: relative;
+}
+
+.body-footer-content .fa-facebook:hover {
+    color: white;
+    background: #6a83d1;
+    text-decoration: none;
+}
+
+.body-footer-content .fa-facebook span {
+    display: block;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    position: relative;
+    left: 35px;
+    top: -30px;
+}
+
+.body-footer-content .fa-facebook:hover span {
+    color: #6a83d1;
+}
+
+.body-footer-content span {
+    display: block;
+    font-size: 0.9em;
+    color: white;
+    width: 100%;
+    margin-top: 5px;
+}
+
+
+/*Profile Recruitment Teacher page*/
+
+#profile-recruitment-body {
+    float: left;
+    height: 83vh;
+    width: 62%;
+    margin-left: 20%;
+    margin-top: 8vh;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
+#profile-recruitment-image {
+    float: left;
+    width: 20%;
+    height: 33vh;
+    margin-top: 3vh;
+    margin-left: 3vh;
+    position: relative;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+#profile-recruitment-image-show {
+    width: 100%;
+    height: 100%;
+}
+
+#profile-recruitment-right-div-name {
+    font-size: 2em;
+    font-weight: 650;
+    float: left;
+    width: 100%;
+}
+
+#profile-recruitment-right-div {
+    margin-top: 3vh;
+    margin-left: 3vh;
+    float: left;
+    width: 75%;
+    
+}
+
+#profile-recruitment-right-div-title {
+    float: left;
+    width: 25%;
+    margin-left: 10px;
+}
+
+#profile-recruitment-right-div-title span,
+#profile-recruitment-right-div-content span {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#profile-recruitment-right-div-content {
+    float: left;
+    width: 70%;
+}
+
+.profile-recruitment-right-div-others {
+    margin-top: 10px;
+}
+
+.profile-recruitment-button {
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+    outline: none;
+    background-image: linear-gradient(to bottom, white, #f0f0f0);
+    border: 0.5px solid lightgray;
+    border-radius: 4px;
+}
+
+.profile-recruitment-button:hover {
+    background-image: linear-gradient(to right, #22acf0, #22acf0);
+    border: 0.5px solid lightgray;
+    border-radius: 4px;
+    color: white;
+}
+
+
+/*Create interview appointment email page*/
+
+#create-interview-body {
+    float: left;
+    min-height: 75vh;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 23vh;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+}
+
+#mail-header-send-button {
+    float: left;
+    height: 100px;
+    width: 8%;
+    outline: none;
+    border: 00.5px solid #ddd;
+    background-color: white;
+    font-size: 0.8em;
+    margin-left: 2%;
+    margin-top: 1%;
+}
+
+#mail-header-send-button img {
+    height: 40%;
+    width: 60%;
+    margin-bottom: 5px;
+}
+
+.mail-header-div {
+    float: left;
+    width: 88%;
+    margin-left: 2%;
+}
+
+.mail-header-title {
+    font-size: 0.75em;
+    width: 10%;
+    height: 25px;
+    border: 0.5px solid #ddd;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 2px;
+    margin-top: 1.5%;
+    float: left;
+}
+
+.mail-header-div input {
+    float: left;
+    height: 25px;
+    width: 87%;
+    outline: none;
+    border: 0.5px solid #ddd;
+    margin-top: 1.5%;
+    font-size: 0.9em;
+    margin-left: 1%;
+}
+
+.mail-header-div input:focus {
+    border-color: #22acf0;
+}
+
+#mail-body {
+    float: left;
+    width: 96.2%;
+    border: 0.5px solid #ddd;
+    font-size: 0.8em;
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+
+/*new CV page*/
+
+#newCV-body {
+    width: 100%;
+    min-height: 70vh;
+    float: left;
+    margin-top: 23vh;
+}
+
+.main-table {
+    width: 70%;
+}
+
+#body-content-new-candidate-table {
+    width: 60%;
+    float: left;
+    z-index: 10;
+    margin-top: 2vh;
+    margin-left: 20%;
+    border: 0.5px solid #466fe977;
+    box-sizing: border-box;
+}
+
+#body-content-new-candidate-table tr {
+    cursor: pointer;
+}
+
+
+/*manage-expense page*/
+
+#manage-expense-body {
+    width: 100%;
+    min-height: 100vh;
+    float: left;
+    margin-top: 23vh;
+}
+
+#body-content-manage-expense-table {
+    width: 60%;
+    float: left;
+    z-index: 10;
+    margin-top: 2vh;
+    margin-left: 20%;
+    border: 0.5px solid #466fe977;
+    box-sizing: border-box;
+}
+
+#body-content-manage-expense-table tr {
+    cursor: pointer;
+}
+
+
+/* noti */
+
+#notify {
+    background-color: white;
+    position: fixed;
+    bottom: 6%;
+    right: 1%;
+}
+
+#body-content-notification-item {
+    background-color: rgb(241, 217, 77);
+    position: fixed;
+    bottom: 16%;
+    right: 1%;
+    display: none;
+}

@@ -1,0 +1,36 @@
+#body-header-menu {
+    margin-left: 45%;
+}
+
+#body-content-list-teacher-response {
+    float: left;
+    margin-top: 8vh;
+    margin-left: 18vh;
+    width: 82%;
+}
+
+.body-header-user-info-dropdown-quality {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 27vh;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 5vh;
+    margin-left: 24vh;
+}
+
+.body-header-user-info-dropdown-quality a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.body-header-user-info-dropdown-quality a:hover {
+    background-color: azure;
+}
+
+#body-header-menu:hover .body-header-user-info-dropdown-quality {
+    display: block;
+}

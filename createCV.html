@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create CV</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        function setFocus() {
+            document.getElementById('createCv-left-menu-basicInfo-button').focus();
+        }
+
+        function changeContent(content) {
+            switch (content) {
+                case 'basicInfo':
+                    document.getElementById('createCv-right-iframe').src = 'basicInfo.html';
+                    break;
+                case 'qualification':
+                    document.getElementById('createCv-right-iframe').src = 'qualification.html';
+                    break;
+                case 'upload':
+                    document.getElementById('createCv-right-iframe').src = 'uploadCv.html';
+                    break;
+            }
+        }
+    </script>
+</head>
+<body onload="setFocus()">
+    <div id="createcv-pannel">
+        <img src="img/logo_Major.png" alt="logo-major" id="createcv-pannel-image">
+    </div>
+    <div id="createcv-body">
+        <div id="createCv-left-menu">
+            <div class="createCv-left-menu-basic-div">
+                <button class="createCv-left-menu-button" id="createCv-left-menu-basicInfo-button" onclick="changeContent('basicInfo')">Basic information</button>
+            </div>
+            <div class="createCv-left-menu-basic-div">
+                <button class="createCv-left-menu-button" onclick="changeContent('qualification')">Qualification</button>
+            </div>
+            <div class="createCv-left-menu-basic-div">
+                <button class="createCv-left-menu-button" onclick="changeContent('upload')">Upload CV</button>
+            </div>
+        </div>
+        <div id="createCv-right">
+            <iframe src="basicInfo.html" title="iframe-content-cv" scrolling="no" id="createCv-right-iframe"></iframe>
+        </div>
+        <div style="font-size: 0.9em; margin-left: 25%;"><span class="compulsory">(*)</span><span> Compulsory field</span></div>
+        <div id="createCv-submit">
+            <form action="thanks.html"><button id="createCv-submit-button">Submit</button></form>
+        </div>
+    </div>
+</body>
+</html>
