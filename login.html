@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <style>
+        .button {
+            background-color: #22acf0;
+            width: 41.5%;
+            height: 30px;
+            border-radius: 20px;
+            outline: none;
+            border: none;
+            color: white;
+            font-size: 0.85em;
+            float: left;
+        }
+
+        .button:hover {
+            background-color: #3557BC;
+        }
+    </style>
+    <script>
+        function checkLogin() {
+            var username = document.getElementById("login-username").value;
+            var password = document.getElementById("login-password").value;
+            if (username === "supervisor" && password === "123"){
+                window.location.href = "hr-supervisor/homepage.html";
+            } else if (username === "consultant" && password === "123"){
+                window.location.href = "recruitment-consultant/homepage-consultant.html";
+            } else if (username === "recTeacher" && password === "123"){
+                window.location.href = "recruitment-teacher/progress-teacher.html";
+            } else if (username === "ac" && password === "123"){
+                window.location.href = "quality-ac/ac-report.html";
+            } else if (username === "quality" && password === "123"){
+                window.location.href = "quality-supervisor/qualitypage.html";
+            } else if (username === "teacher" && password === "123"){
+                window.location.href = "quality-teacher/teacherEvaluate.html";
+            } else if (username === "officer" && password === "123"){
+                window.location.href = "compliance-officer/homepage-officer.html";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="login">
+        <div id="login-body">
+            <div id="login-body-left">
+                <div id="login-body-left-content">
+                    <span id="login-body-left-content_firstline">Welcome to</span><br>
+                    <span id="login-body-left-content_secondline">HR Management System</span><br>
+                    <span id="login-body-left-content_thirdline">Managing recruitment and Evaluating result of staff</span>
+                </div>
+                <div id="login-body-left-image">
+                    <img id="login-body-left-image_firstimg" src="img/Graduation-rafiki.png" />
+                </div>
+            </div>
+            <div id="login-body-right">
+                <div id="login-body-right-logo">
+                    <img src="img/logo-major-education.png" alt="logo-major" id="login-body-logo">
+                </div>
+                <div id="login-body-right-loginform">
+                    <span id="login-title">LOGIN</span>
+                    <div id="login-input">
+                        <div id="login-input-username">
+                            <input type="text" placeholder="Username" class="login-input-field" id="login-username">
+                            <i class='fas fa-user-alt'></i>
+                        </div>
+                        <div id="login-input-password">
+                            <input type="password" placeholder="Password" class="login-input-field" id="login-password">
+                            <i class="fa fa-lock"></i>
+                        </div>
+                    </div>
+                    <div id="login-button-div">
+                        <button id="login-button" onclick="checkLogin()">LOGIN</button>
+                    </div>
+                    <div class="createCv-iframe-border" style="float: left; margin-top: 5vh; margin-bottom: 2vh; width: 87%;"></div>
+                    <button class="button">Forgot password</button>
+                    <form action="CreateCV.html"><button class="button" style="margin-left: 10px;">Create CV</button></form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
