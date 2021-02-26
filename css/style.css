@@ -2,7 +2,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #f9f9f9;
     min-width: 97vh;
-    min-height: 97vh;
+    min-height: 50vh;
 }
 
 button {
@@ -451,7 +451,7 @@ button {
     height: 20vh;
     position: fixed;
     float: left;
-    z-index: 1;
+    z-index: 100;
 }
 
 #body-header-info {
@@ -982,4 +982,29 @@ button {
     bottom: 16%;
     right: 1%;
     display: none;
+}
+
+#body-content-number-teacher-item {
+    width: 17%;
+    height: 15vh;
+    float: left;
+    margin-top: 2.5vh;
+    margin-left: 12.5vh;
+}
+
+#body-content-number-teacher-item-word {
+    color: #aaa;
+    float: left;
+}
+
+#body-content-number-teacher-item-info {
+    font-size: 1.5em;
+    float: left;
+}
+
+#body-content-number-teacher-item-status {
+    float: right;
+    height: 90%;
+    margin-top: -3.5vh;
+    border-radius: 25px;
 }

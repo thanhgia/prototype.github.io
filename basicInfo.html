@@ -1,4 +1,26 @@
 <link rel="stylesheet" href="css/style.css">
+<style>
+    #createCV-supervisor-body {
+        float: left;
+        min-height: 75vh;
+        width: 54%;
+        margin-left: 23%;
+        margin-top: 23vh;
+        margin-bottom: 5vh;
+        background-color: white;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+        padding-left: 4vh;
+        padding-top: 2vh;
+    }
+
+    h5 {
+        font-size: 1.1em;
+    }
+
+    input[type="text"]:disabled {
+        background-image: linear-gradient(to bottom,#dddddd, #dddddd);
+    }
+</style>
 <div class="createCv-iframe-page">
     <span class="createCv-iframe-title">Basic information</span>
     <div id="basicInfo-image">
@@ -48,7 +70,7 @@
     </div>
     <div id="basicInfo-source" class="basicInfo-div">
         <span class="basicInfo-div-title">Where you know this from? <span class="compulsory">(*)</span></span><br>
-        <select name="basicInfo-nationality__select" id="basicInfo-nationality__select" class="basicInfo-input">
+        <select name="basicInfo-reference__select" id="basicInfo-reference__select" class="basicInfo-input" onchange="activeInput()">
             <option value="UK">UK</option>
             <option value="Ireland">Ireland</option>
             <option value="Scotland">Scotland</option>
@@ -56,8 +78,22 @@
             <option value="Canada">Canada</option>
             <option value="New Zealand">New Zealand</option>
             <option value="Australia">Australia</option>
-            <option value="South Africa">Others</option>
+            <option value="Others">Others</option>
         </select>
     </div>
+    <div id="basicInfo-skype" class="basicInfo-div">
+        <span class="basicInfo-div-title">Reference</span><br>
+        <input type="text" class="basicInfo-input" id="reference-input" disabled>
+    </div>
     <script src="./js/uploadImage.js"></script>
+    <script>
+        function activeInput() {
+            if (document.getElementById("basicInfo-reference__select").value === "Others") {
+                document.getElementById("reference-input").disabled = false;
+            } else {
+                document.getElementById("reference-input").disabled = true;
+            }
+            
+        }
+    </script>
 </div>

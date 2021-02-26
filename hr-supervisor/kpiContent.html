@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC evaluation management</title>
+    <link rel="stylesheet" href="../css/acpage.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
+    <script>
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            var header = document.getElementById("body-header");
+            var sticky = header.offsetTop;
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+
+        $(document).ready(function() {
+            $("#body-content-table-search-field").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#table-info tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+
+            $('#table-list-teacher').DataTable();
+        });
+    </script>
+    <style>
+        h5 {
+            width: 100%;
+            float: left;
+        }
+
+        .form-title {
+            width: 100%;
+            margin-left: 2vh;
+        }
+
+        .button {
+            float: right;
+            outline: none;
+            background-image: linear-gradient(to bottom, white, #f0f0f0);
+            border: 0.5px solid lightgray;
+            border-radius: 4px;
+            width: 170px;
+        }
+
+        .button:hover {
+            background-image: linear-gradient(to right, #22acf0, #22acf0);
+            border-radius: 4px;
+            color: white;
+        }
+
+        .button:focus {
+            outline: none;
+        }
+
+        #modify-body {
+            float: left;
+            height: 40vh;
+            width: 40%;
+            margin-left: 30%;
+            margin-top: 20vh;
+            background-color: white;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+        }
+
+        #delete-body {
+            float: left;
+            height: 10vh;
+            width: 28%;
+            margin-left: 35%;
+            margin-top: 30vh;
+            background-color: white;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+        }
+
+        .schedule-div-title {
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+
+        i:hover {
+            color: blue;
+        }
+
+        .basicInfo-div-big {
+            width: 65%;
+            float: left;
+        }
+
+        .basicInfo-div-small {
+            width: 35%;
+            float: left;
+        }
+
+        .basicInfo-input {
+            width: 95%;
+            margin-bottom: 5%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="body-header">
+        <div id="body-header-info">
+            <div id="body-header-logo">
+                <img id="body-header-logo-img" src="../img/Major-logo.png" />
+            </div>
+            <div id="body-header-menu-list-menu" style="width: 46%;">
+                <a href="../hr-supervisor/homepage.html" class="body-header-menu-item">Home</a>
+                <div class="separator">|</div>
+                <div class="navbar-header-dropdown">
+                    <button class="navbar-header-dropbtn">Recruitment <i class="fa fa-caret-down"></i></button>
+                    <div class="navbar-header-dropdown-content">
+                        <a href="createCV-supervisor.html">Create CV</a><a href="newCV.html">New CV</a>
+                        <a href="waitedCV.html">Waiting interview</a>
+                        <a href="teacher-recruitment.html">Teacher</a>
+                        <a href="source-statistic.html">Supply resource</a><a href="progressContent.html">Progress content</a>
+                    </div>
+                </div>
+                <div class="separator">|</div>
+                <div class="navbar-header-dropdown">
+                    <button class="navbar-header-dropbtn">Quality <i class="fa fa-caret-down"></i></button>
+                    <div class="navbar-header-dropdown-content">
+                        <a href="work-assignment.html">Assignment</a><a href="QualitySupervisor.html">AC</a>
+                        <a href="qualitypage.html">Teacher</a><a href="acEvaluateContent.html">Evaluate content</a><a href="kpiContent.html">KPI content</a>
+                    </div>
+                </div>
+                <div class="separator">|</div>
+                <div class="navbar-header-dropdown body-header-user-info">
+                    <button class="navbar-header-dropbtn">
+                        <span style="float: left;">Full name &nbsp; </span>
+                        <img class="rounded-circle" src="../img/user.png" width="40vh" height="40vh" style="float: left;" />
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="navbar-header-dropdown-content body-header-user-info-dropdown">
+                        <a href="profile.html">Profile</a>
+                        <a href="../login.html">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="body-header-search">
+            <input type="text" placeholder="Search" id="body-header-search-input">
+        </div>
+    </div>
+    <div id="body-content">
+        <div id="body-content-candidate-table" class="shadow p-3 mb-5 bg-white rounded" style="margin-left: 20%; width: 60%; margin-top: 3vh; border: 0.5px solid #466fe977; ">
+            <div id="body-content-table-title" style="width: 100%;">
+                <h3 style="width: 60%; float: left;">KPI content</h3>
+                <button class="button" data-toggle="modal" data-target="#add">Add content</button>
+            </div>
+            <table class="table table-hover" id="table-list-teacher">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col" style="width: 30%;">Content</th>
+                        <th style="width: 35%;">Criteria</th>
+                        <th style="width: 10%;">Type</th>
+                        <th style="width: 10%;">Point</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="table-info">
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Base on the evaluation from the students</td>
+                        <td>CRITERIA 1: MONTHLY EVALUATION FROM THE STUDENTS</td>
+                        <td>Fill</td>
+                        <td></td>
+                        <td><i class="fa fa-edit" data-toggle="modal" data-target="#update"></i> <i
+                            class="fa fa-trash" data-toggle="modal" data-target="#delete"></i></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Base on the evaluation from the school board</td>
+                        <td>CRITERIA 2: MONTHLY EVALUATION FROM THE SCHOOL BOARD</td>
+                        <td>Fill</td>
+                        <td></td>
+                        <td><i class="fa fa-edit" data-toggle="modal" data-target="#update"></i> <i
+                            class="fa fa-trash" data-toggle="modal" data-target="#delete"></i></td>
+                    </tr>
+                    <tr>                                       
+                        <th scope="row">3</th>
+                        <td>Absent without notice</td>
+                        <td>CRITERIA 3: COMPANY POLICY</td>
+                        <td>Minus - One time</td>
+                        <td>5</td>
+                        <td><i class="fa fa-edit" data-toggle="modal" data-target="#update"></i> <i
+                            class="fa fa-trash" data-toggle="modal" data-target="#delete"></i></td>
+                    </tr>
+                    <tr>                                       
+                        <th scope="row">3</th>
+                        <td>Lateness (with notice)</td>
+                        <td>CRITERIA 3: COMPANY POLICY</td>
+                        <td>Minus - Many times</td>
+                        <td>50</td>
+                        <td><i class="fa fa-edit" data-toggle="modal" data-target="#update"></i> <i
+                            class="fa fa-trash" data-toggle="modal" data-target="#delete"></i></td>
+                    </tr>
+                    <tr>                                       
+                        <th scope="row">3</th>
+                        <td>Achieve 6 short notice subbing hours</td>
+                        <td>CRITERIA 3: COMPANY POLICY</td>
+                        <td>Bonus - One time</td>
+                        <td>10</td>
+                        <td><i class="fa fa-edit" data-toggle="modal" data-target="#update"></i> <i
+                            class="fa fa-trash" data-toggle="modal" data-target="#delete"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="body-footer">
+        <div id="body-footer-quicklink" class="body-footer-div">
+            <div class="body-footer-title">Quick Links</div>
+            <div class="body-footer-content">
+                <a href="http://major.vn/#top">About Us</a><br>
+                <a href="http://major.vn/#top">Terms of use</a><br>
+                <a href="http://major.vn/#top">FAQ</a><br>
+                <a href="http://major.vn/#top">Support</a>
+            </div>
+        </div>
+        <div id="body-footer-followus" class="body-footer-div">
+            <div class="body-footer-title">Follow Us</div>
+            <div class="body-footer-content">
+                <a href="https://www.facebook.com/majorsel" class="fa fa-facebook"><span>Facebook</span></a>
+            </div>
+        </div>
+        <div id="body-footer-contact" class="body-footer-div-contact">
+            <div class="body-footer-title">Contact</div>
+            <div class="body-footer-content">
+                <span>Head Quarter: 269A Nguyen Trong Tuyen Street, Ward 10, District Phu Nhuan, HCM City, Viet
+                    Nam</span>
+                <span>Branch 2 : 160/72 Phan Huy Ich Street, Ward 12, Go Vap District, HCM City, Viet Nam</span>
+                <span>Email: hungtien@truongvietanh.com.</span>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="add">
+        <div id="modify-body" class="modal-dialog modal-xl">
+            <div class="modal-content" style="float: left; display: inline; border: none;">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add content</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                
+                <!-- Modal body -->
+                <div class="modal-body" style="height: 30vh;">
+                    <div id="basicInfo-dob" class="basicInfo-div-big">
+                        <span class="basicInfo-div-title">Content</span><br>
+                        <input type="text" class="basicInfo-input">
+                    </div>
+                    <div id="basicInfo-nationality" class="basicInfo-div-small">
+                        <span class="basicInfo-div-title">Type <span class="compulsory">(*)</span></span><br>
+                        <select name="basicInfo-nationality__select" id="basicInfo-nationality__select" class="basicInfo-input">
+                            <option value="VietNam">Fill</option>
+                            <option value="UK">Minus - One time</option>
+                            <option value="Ireland">Minus - Many times</option>
+                            <option value="UK">Bonus - One time</option>
+                            <option value="Ireland">Bonus - Many times</option>
+                        </select>
+                    </div>
+                    <div id="basicInfo-nationality" class="basicInfo-div-big">
+                        <span class="basicInfo-div-title">Criteria <span class="compulsory">(*)</span></span><br>
+                        <select name="basicInfo-nationality__select" id="basicInfo-nationality__select" class="basicInfo-input">
+                            <option value="VietNam">CRITERIA 1: MONTHLY EVALUATION FROM THE STUDENTS</option>
+                            <option value="UK">CRITERIA 2: MONTHLY EVALUATION FROM THE SCHOOL BOARD</option>
+                            <option value="Ireland">CRITERIA 3: COMPANY POLICY</option>
+                        </select>
+                    </div>
+                    <div id="basicInfo-dob" class="basicInfo-div-small">
+                        <span class="basicInfo-div-title">Point</span><br>
+                        <input type="text" class="basicInfo-input">
+                    </div>
+                </div>
+                  
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <button type="button" class="button" data-dismiss="modal" style="width: 80px;">Add</button>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="update">
+        <div id="modify-body" class="modal-dialog modal-xl">
+            <div class="modal-content" style="float: left; display: inline; border: none;">
+                <div class="modal-header">
+                    <h4 class="modal-title">Update content</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                
+                <!-- Modal body -->
+                <div class="modal-body" style="height: 30vh;">
+                    <div id="basicInfo-dob" class="basicInfo-div-big">
+                        <span class="basicInfo-div-title">Content</span><br>
+                        <input type="text" class="basicInfo-input">
+                    </div>
+                    <div id="basicInfo-nationality" class="basicInfo-div-small">
+                        <span class="basicInfo-div-title">Type <span class="compulsory">(*)</span></span><br>
+                        <select name="basicInfo-nationality__select" id="basicInfo-nationality__select" class="basicInfo-input">
+                            <option value="VietNam">Fill</option>
+                            <option value="UK">Minus - One time</option>
+                            <option value="Ireland">Minus - Many times</option>
+                            <option value="UK">Bonus - One time</option>
+                            <option value="Ireland">Bonus - Many times</option>
+                        </select>
+                    </div>
+                    <div id="basicInfo-nationality" class="basicInfo-div-big">
+                        <span class="basicInfo-div-title">Criteria <span class="compulsory">(*)</span></span><br>
+                        <select name="basicInfo-nationality__select" id="basicInfo-nationality__select" class="basicInfo-input">
+                            <option value="VietNam">CRITERIA 1: MONTHLY EVALUATION FROM THE STUDENTS</option>
+                            <option value="UK">CRITERIA 2: MONTHLY EVALUATION FROM THE SCHOOL BOARD</option>
+                            <option value="Ireland">CRITERIA 3: COMPANY POLICY</option>
+                        </select>
+                    </div>
+                    <div id="basicInfo-dob" class="basicInfo-div-small">
+                        <span class="basicInfo-div-title">Point</span><br>
+                        <input type="text" class="basicInfo-input">
+                    </div>
+                </div>
+                  
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <button type="button" class="button" data-dismiss="modal" style="width: 80px;">Update</button>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="delete">
+        <div id="delete-body" class="modal-dialog modal-xl">
+            <div class="modal-content" style="float: left; display: inline; border: none;">
+                <div class="modal-header">
+                    <h4 class="modal-title">Confirm message</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                    Are you sure you want to delete this content?
+                  </div>
+                  
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <button type="button" class="button" data-dismiss="modal" style="width: 80px;">No</button>
+                    <button type="button" class="button" data-dismiss="modal" style="width: 80px;">Yes</button>
+                  </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

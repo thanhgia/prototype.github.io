@@ -5,13 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List AC Report</title>
-    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/acpage.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
     <script>
         window.onscroll = function() {
             scrollFunction()
@@ -34,6 +40,8 @@
                     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
                 });
             });
+
+            $('#table-list-teacher').DataTable();
         });
     </script>
 </head>
@@ -44,7 +52,7 @@
             <div id="body-header-logo">
                 <img id="body-header-logo-img" src="../img/Major-logo.png" />
             </div>
-            <div id="body-header-menu-list-menu" style="width: 55%;">
+            <div id="body-header-menu-list-menu" style="width: 46%;">
                 <a href="../hr-supervisor/homepage.html" class="body-header-menu-item">Home</a>
                 <div class="separator">|</div>
                 <div class="navbar-header-dropdown">
@@ -52,35 +60,27 @@
                     <div class="navbar-header-dropdown-content">
                         <a href="createCV-supervisor.html">Create CV</a><a href="newCV.html">New CV</a>
                         <a href="waitedCV.html">Waiting interview</a>
-                        <a href="teacher-recruitment.html">Teacher</a><a href="source-statistic.html">Supply resource</a>
+                        <a href="teacher-recruitment.html">Teacher</a>
+                        <a href="source-statistic.html">Supply resource</a><a href="progressContent.html">Progress content</a>
                     </div>
                 </div>
                 <div class="separator">|</div>
                 <div class="navbar-header-dropdown">
                     <button class="navbar-header-dropbtn">Quality <i class="fa fa-caret-down"></i></button>
                     <div class="navbar-header-dropdown-content">
-                        <a href="QualitySupervisor.html">Teacher</a>
-                        <a href="qualitypage.html">AC</a>
-                    </div>
-                </div>
-                <div class="separator">|</div>
-                <div class="navbar-header-dropdown">
-                    <button class="navbar-header-dropbtn">Others <i class="fa fa-caret-down"></i></button>
-                    <div class="navbar-header-dropdown-content">
-                        <a href="manageAccount.html">Account management</a>
-                        <a href="manageHoliday.html">Holiday management</a><a href="manageNoti.html">Notification management</a>
-                        
+                        <a href="work-assignment.html">Assignment</a><a href="QualitySupervisor.html">AC</a>
+                        <a href="qualitypage.html">Teacher</a><a href="acEvaluateContent.html">Evaluate content</a><a href="kpiContent.html">KPI content</a>
                     </div>
                 </div>
                 <div class="separator">|</div>
                 <div class="navbar-header-dropdown body-header-user-info">
-                    <button class="navbar-header-dropbtn" id="body-header-user-info-button">
+                    <button class="navbar-header-dropbtn">
                         <span style="float: left;">Full name &nbsp; </span>
                         <img class="rounded-circle" src="../img/user.png" width="40vh" height="40vh" style="float: left;" />
                         <i class="fa fa-caret-down"></i>
                     </button>
                     <div class="navbar-header-dropdown-content body-header-user-info-dropdown">
-                        <a href="#">Profile</a>
+                        <a href="profile.html">Profile</a>
                         <a href="../login.html">Logout</a>
                     </div>
                 </div>
@@ -91,13 +91,10 @@
         </div>
     </div>
     <div id="body-content">
-        <div id="body-content-candidate-table" class="shadow p-3 mb-5 bg-white rounded" style="margin-left: 8%; width: 84%; margin-top: 3vh; ">
-            <div id="body-content-table-title">
+        <div id="body-content-candidate-table" class="shadow p-3 mb-5 bg-white rounded" style="margin-left: 20%; width: 60%; margin-top: 3vh; border: 0.5px solid #466fe977;">
+            <div id="body-content-table-title" style="width: 100%;">
                 <h3>List AC Report </h3>
 
-            </div>
-            <div class="active-pink-4 mb-4" id="body-content-table-search">
-                <input class="form-control" id="body-content-table-search-field" type="text" placeholder="Search" aria-label="Search">
             </div>
             <table class="table table-hover" id="table-list-teacher">
                 <thead>

@@ -29,7 +29,8 @@
     </script>
     <script>
         $(document).ready(function () {
-            $('#example').DataTable({
+            $('#table-list-teacher').DataTable({
+                "order": [[3, "desc"]]
             });
 
         });
@@ -42,12 +43,24 @@
             <div id="body-header-logo">
                 <img id="body-header-logo-img" src="../img/Major-logo.png" />
             </div>
-            <div id="body-header-menu-list-menu" style="width: 53%;">
-                <a href="homepage-officer.html" class="body-header-menu-item">Home</a>
+            <div id="body-header-menu-list-menu" style="width: 45%;">
+                <a href="homepage.html" class="body-header-menu-item">Home</a>
                 <div class="separator">|</div>
-                <a href="recruitment-teacher.html" class="body-header-menu-item" style="margin-left: 20px;">Recruitment teacher</a>
+                <div class="navbar-header-dropdown">
+                    <button class="navbar-header-dropbtn">Evaluate <i class="fa fa-caret-down"></i></button>
+                    <div class="navbar-header-dropdown-content">
+                        <a href="qualitypage.html">Teacher</a>
+                        <a href="QualitySupervisor.html">AC</a>
+                    </div>
+                </div>
                 <div class="separator">|</div>
-                <a href="progressContent.html" class="body-header-menu-item" style="margin-left: 20px;">Progress content</a>
+                <div class="navbar-header-dropdown">
+                    <button class="navbar-header-dropbtn">Content <i class="fa fa-caret-down"></i></button>
+                    <div class="navbar-header-dropdown-content">
+                        <a href="acEvaluateContent.html">Evaluate AC</a>
+                        <a href="kpiContent.html">KPI teacher</a>
+                    </div>
+                </div>
                 <div class="separator">|</div>
                 <div class="navbar-header-dropdown body-header-user-info">
                     <button class="navbar-header-dropbtn">
@@ -95,95 +108,88 @@
                 <div class="p-1 flex-shrink-1 bg-success" id="body-content-number-teacher-item-status"></div>
             </div>
         </div>
-        <div id="body-content-cadidate-table" class="shadow p-3 mb-5 bg-white rounded">
+        <div id="body-content-cadidate-table" class="shadow p-3 mb-5 bg-white rounded" style="width: 59%;">
             <div id="body-content-table-title">
-                <h5>List teachers</h5>
+                <h5>List AC</h5>
             </div>
-            <table class="table table-hover" id="example">
+            <table class="table table-hover" id="table-list-teacher">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
+                        <th scope="col">ID</th>
                         <th scope="col">Name</th>
                         <th scope="col">Nationality</th>
-                        <th scope="col">Progress</th>
-                        <th scope="col">Deadline</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">List teacher</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr onclick="showProfile()">
+                <tbody id="table-info">
+                    <tr>
                         <th scope="row">1</th>
-                        <td>Ryan Jacob</td>
-                        <td>UK</td>
-                        <td>Prepare procedure</td>
-                        <td>20/12/2020</td>
+                        <td>James George</td>
+                        <td>Canada</td>
+                        <td>Rory@gmail.com</td>
+                        <td><a href="list-teacher-of-AC.html">View detail</a></td>
                     </tr>
-                    <tr onclick="showProfile()">
+                    <tr>
                         <th scope="row">2</th>
-                        <td>Gary Nicholas</td>
-                        <td>Ireland</td>
-                        <td>Prepare procedure</td>
-                        <td>21/12/2020</td>
+                        <td>Elizabeth Rodriguez</td>
+                        <td>Canada</td>
+                        <td>Corbin@gmail.com</td>
+                        <td><a href="list-teacher-of-AC.html">View detail</a></td>
                     </tr>
-                    <tr onclick="showProfile()">
+                    <tr>
                         <th scope="row">3</th>
-                        <td>Diane Julie</td>
-                        <td>Scotland</td>
-                        <td>In Viet Nam</td>
-                        <td>22/12/2020</td>
-                    </tr>
-                    <tr onclick="showProfile()">
-                        <th scope="row">4</th>
-                        <td>Eric Jonathan</td>
-                        <td>US</td>
-                        <td>In Viet Nam</td>
-                        <td>22/12/2020</td>
-                    </tr>
-                    <tr onclick="showProfile()">
-                        <th scope="row">5</th>
-                        <td>Laura Sharon</td>
-                        <td>Canada</td>
-                        <td>In Viet Nam</td>
-                        <td>25/12/2020</td>
-                    </tr>
-                    <tr onclick="showProfile()">
-                        <th scope="row">6</th>
-                        <td>Stephanie Rebecca</td>
+                        <td>Jennifer Martinez</td>
                         <td>New Zealand</td>
-                        <td>In Viet Nam</td>
-                        <td>26/12/2020</td>
+                        <td>Elias@gmail.com</td>
+                        <td><a href="list-teacher-of-AC.html">View detail</a></td>
                     </tr>
-                    <tr onclick="showProfile()">
-                        <th scope="row">7</th>
-                        <td>Jack Patrick</td>
-                        <td>Australia</td>
-                        <td>Prepare procedure</td>
-                        <td>27/12/2020</td>
-                    </tr>
-                    <tr onclick="showProfile()">
-                        <th scope="row">8</th>
-                        <td>Ruth Christine</td>
-                        <td>South Africa</td>
-                        <td>Prepare procedure</td>
-                        <td>27/12/2020</td>
-                    </tr>
-                    <tr onclick="showProfile()">
-                        <th scope="row">9</th>
-                        <td>Jerry Tyler</td>
-                        <td>Ireland</td>
-                        <td>Prepare procedure</td>
-                        <td>27/12/2020</td>
-                    </tr>
-                    <tr onclick="showProfile()">
-                        <th scope="row">10</th>
-                        <td>Jose Henry</td>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>William Taylor</td>
                         <td>Canada</td>
-                        <td>Prepare procedure</td>
-                        <td>30/12/2020</td>
+                        <td>Otis@gmail.com</td>
+                        <td><a href="list-teacher-of-AC.html">View detail</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Maria Hernandez</td>
+                        <td>Ireland</td>
+                        <td>Bernie@gmail.com</td>
+                        <td><a href="list-teacher-of-AC.html">View detail</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>Jennifer Martinez</td>
+                        <td>New Zealand</td>
+                        <td>Elias@gmail.com</td>
+                        <td><a href="list-teacher-of-AC.html">View detail</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td>Mark</td>
+                        <td>Canada</td>
+                        <td>Finn@gmail.com</td>
+                        <td><a href="list-teacher-of-AC.html">View detail</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">8</th>
+                        <td>William Taylor</td>
+                        <td>Canada</td>
+                        <td>Otis@gmail.com</td>
+                        <td><a href="list-teacher-of-AC.html">View detail</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">9</th>
+                        <td>James Smith</td>
+                        <td>UK</td>
+                        <td>Beckham@gmail.com</td>
+                        <td><a href="list-teacher-of-AC.html">View detail</a></td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <div id="body-content-anoumence" class="shadow p-3 mb-5 bg-white rounded">
+        <div id="body-content-anoumence" class="shadow p-3 mb-5 bg-white rounded" style="width: 25%;">
             <div id="body-content-anoumence-task">
                 <h5>Announcements </h5>
                 <hr style="font-weight: bolder;">

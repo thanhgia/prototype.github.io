@@ -101,19 +101,21 @@
             <div id="body-header-logo">
                 <img id="body-header-logo-img" src="../img/Major-logo.png" />
             </div>
-            <div id="body-header-menu-list-menu" style="width: 40%;">
+            <div id="body-header-menu-list-menu" style="width: 53%;">
                 <a href="homepage-officer.html" class="body-header-menu-item">Home</a>
                 <div class="separator">|</div>
                 <a href="recruitment-teacher.html" class="body-header-menu-item" style="margin-left: 20px;">Recruitment teacher</a>
                 <div class="separator">|</div>
+                <a href="progressContent.html" class="body-header-menu-item" style="margin-left: 20px;">Progress content</a>
+                <div class="separator">|</div>
                 <div class="navbar-header-dropdown body-header-user-info">
-                    <button class="navbar-header-dropbtn" id="body-header-user-info-button">
+                    <button class="navbar-header-dropbtn">
                         <span style="float: left;">Full name &nbsp; </span>
                         <img class="rounded-circle" src="../img/user.png" width="40vh" height="40vh" style="float: left;" />
                         <i class="fa fa-caret-down"></i>
                     </button>
                     <div class="navbar-header-dropdown-content body-header-user-info-dropdown">
-                        <a href="#">Profile</a>
+                        <a href="profile.html">Profile</a>
                         <a href="../login.html">Logout</a>
                     </div>
                 </div>
@@ -127,7 +129,7 @@
         <div id="body-content-manage-expense-table" class="shadow p-3 mb-5 bg-white rounded main-table">
             <div id="body-content-table-title">
                 <h5>List expense</h5>
-                <button class="button" onclick="openForm()">New transaction</button>
+                <button class="button" onclick="openForm()">New expense</button>
             </div>
             <div id="body-content-table-title">
                 <h5>Balance: 2300</h5>
@@ -136,35 +138,41 @@
                 <thead>
                     <tr>
                         <th scope="col" style="width: 15%;">Date</th>
-                        <th scope="col" style="width: 65%;">Content</th>
+                        <th scope="col" style="width: 50%;">Content</th>
                         <th scope="col">Amount</th>
+                        <th scope="col" style="text-align:center;">Monetary unit</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr onclick="showProfile()">
+                    <tr>
                         <td>22/12/2020</td>
                         <td>Chuyển tiền đợt 1</td>
                         <td style="color: green;">5000</td>
+                        <td style="text-align:center;">USD</td>
                     </tr>
-                    <tr onclick="showProfile()">
+                    <tr>
                         <td>23/12/2020</td>
                         <td>Make a passport</td>
                         <td style="color: red;">3000</td>
+                        <td style="text-align:center;">USD</td>
                     </tr>
-                    <tr onclick="showProfile()">
+                    <tr>
                         <td>24/12/2020</td>
                         <td>Make a passport</td>
                         <td style="color: red;">200</td>
+                        <td style="text-align:center;">USD</td>
                     </tr>
-                    <tr onclick="showProfile()">
+                    <tr>
                         <td>25/12/2020</td>
                         <td>Make a passport</td>
                         <td style="color: red;">500</td>
+                        <td style="text-align:center;">USD</td>
                     </tr>
-                    <tr onclick="showProfile()">
+                    <tr>
                         <td>22/12/2020</td>
                         <td>Make a passport</td>
                         <td style="color: green;">1000</td>
+                        <td style="text-align:center;">USD</td>
                     </tr>
                 </tbody>
             </table>
@@ -172,7 +180,7 @@
     </div>
     <div id="add-transaction-form">
         <div id="new-transaction-content">
-            <h5>New transaction</h5>
+            <h5>New expense</h5>
             <div id="new-transaction-content-div">
                 <div id="new-transaction-date" class="new-transaction-input-div-first">
                     <span class="new-transaction-div-title">Date</span><br>
@@ -194,7 +202,7 @@
                     <input type="text" class="new-transaction-input">
                 </div>
             </div>
-            <button class="button" onclick="closeForm()">New transaction</button>
+            <button class="button" onclick="closeForm()">New expense</button>
         </div>
     </div>
     <div id="body-footer">

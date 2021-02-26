@@ -9,9 +9,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">t>
     <script>
         function showNoti() {
             var x = document.getElementById("body-content-notification-item");
@@ -21,6 +26,14 @@
                 x.style.display = "none";
             }
         }
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable({
+                "order": [[3, "desc"]]
+            });
+
+        });
     </script>
 </head>
 
@@ -43,13 +56,13 @@
                 </div>
                 <div class="separator">|</div>
                 <div class="navbar-header-dropdown body-header-user-info">
-                    <button class="navbar-header-dropbtn" id="body-header-user-info-button">
+                    <button class="navbar-header-dropbtn">
                         <span style="float: left;">Full name &nbsp; </span>
                         <img class="rounded-circle" src="../img/user.png" width="40vh" height="40vh" style="float: left;" />
                         <i class="fa fa-caret-down"></i>
                     </button>
                     <div class="navbar-header-dropdown-content body-header-user-info-dropdown">
-                        <a href="#">Profile</a>
+                        <a href="profile.html">Profile</a>
                         <a href="../login.html">Logout</a>
                     </div>
                 </div>
@@ -65,7 +78,7 @@
             <div id="body-content-table-title">
                 <h5>Top 10 candidates</h5>
             </div>
-            <table class="table table-hover">
+            <table class="table table-hover" id="example">
                 <thead>
                     <tr>
                         <th scope="col" style="width: 5%;">#</th>

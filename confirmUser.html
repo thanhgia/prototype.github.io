@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update user</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        
+    </script>
+    <style>
+        .form-title {
+            width: 100%;
+            margin-left: 2vh;
+        }
+
+        .button {
+            float: right;
+            margin-right: 20px;
+            outline: none;
+            background-image: linear-gradient(to bottom, white, #f0f0f0);
+            border: 0.5px solid lightgray;
+            border-radius: 4px;
+            width: 180px;
+        }
+
+        .button:hover {
+            background-image: linear-gradient(to right, #22acf0, #22acf0);
+            border-radius: 4px;
+            color: white;
+        }
+
+        .button:focus {
+            outline: none;
+        }
+
+        .schedule-div {
+            width: 91%;
+            float: left;
+            margin-top: 0.3vh;
+            margin-left: 5vh;
+        }
+
+        #profile-recruitment-body {
+            float: left;
+            height: 85vh;
+            width: 56%;
+            margin-left: 22%;
+            margin-top: 8vh;
+            background-color: white;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+        }
+
+        #update-body {
+            float: left;
+            height: 88vh;
+            width: 56%;
+            margin-left: 22%;
+            margin-top: 23vh;
+            margin-bottom: 5vh;
+            background-color: white;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+        }
+
+        #delete-body {
+            float: left;
+            height: 10vh;
+            width: 28%;
+            margin-left: 35%;
+            margin-top: 30vh;
+            background-color: white;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+        }
+
+        .schedule-div-title {
+            font-weight: 600;
+        }
+
+        .schedule-input {
+            background-image: linear-gradient(to bottom, white, #f0f0f0);
+            height: 30px;
+            width: 90%;
+            border: 0.5px solid lightgray;
+            border-radius: 4px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            padding-left: 5px;
+        }
+
+        i:hover {
+            color: blue;
+        }
+
+        .basicInfo-input {
+            width: 95%;
+            margin-bottom: 5%;
+        }
+    </style>
+</head>
+<body>
+    <div id="createcv-pannel">
+        <img src="img/logo_Major.png" alt="logo-major" id="createcv-pannel-image">
+    </div>
+    <div id="update">
+        <div id="update-body" class="modal-dialog modal-xl">
+            <div class="modal-content" style="float: left; display: inline; border: none;">
+                <div id="createCV-supervisor-body">
+                    <h3 style="padding-left: 3%;">Update user</h3>
+                    <div id="basicInfo-image" style="width: 50%; height: 25vh;">
+                        <div class="createCv-drop-zone-basicInfo" style="width: 32%; height: 90%;">
+                            <span class="createCv-drop-zone__prompt">Drop image here or click to upload</span>
+                            <input type="file" name="myFile" class="createCv-drop-zone__input" accept="image/*">
+                        </div>
+                    </div>
+                    <div id="basicInfo-fullname" class="basicInfo-div">
+                        <span class="basicInfo-div-title">Fullname <span class="compulsory">(*)</span></span><br>
+                        <input type="text" class="basicInfo-input" value="Charles John">
+                    </div>
+                    <div id="basicInfo-dob" class="basicInfo-div">
+                        <span class="basicInfo-div-title">Date of birth <span class="compulsory">(*)</span></span><br>
+                        <input type="date" class="basicInfo-input">
+                    </div>
+                    <div id="basicInfo-phone" class="basicInfo-div">
+                        <span class="basicInfo-div-title">Phone numbers <span class="compulsory">(*)</span></span><br>
+                        <input type="tel" class="basicInfo-input" value="0123456789">
+                    </div>
+                    <div id="basicInfo-dob" class="basicInfo-div" style="padding-left: 3%;">
+                        <span class="basicInfo-div-title">Email</span><br>
+                        <input type="text" class="basicInfo-input" value="John@truongvietanh.com.vn" disabled>
+                    </div>
+                    <div id="basicInfo-phone" class="basicInfo-div">
+                        <span class="basicInfo-div-title">Password <span class="compulsory">(*)</span></span><br>
+                        <input type="password" class="basicInfo-input" value="123">
+                    </div>
+                    <div id="basicInfo-nationality" class="basicInfo-div" style="padding-left: 3%;">
+                        <span class="basicInfo-div-title">Nationality <span class="compulsory">(*)</span></span><br>
+                        <select name="basicInfo-nationality__select" id="basicInfo-nationality__select" class="basicInfo-input">
+                            <option value="VietNam">Viet Nam</option>
+                            <option value="UK" selected>UK</option>
+                            <option value="Ireland">Ireland</option>
+                            <option value="Scotland">Scotland</option>
+                            <option value="US">US</option>
+                            <option value="Canada">Canada</option>
+                            <option value="New Zealand">New Zealand</option>
+                            <option value="Australia">Australia</option>
+                            <option value="South Africa">South Africa</option>
+                        </select>
+                    </div>
+                    <div id="basicInfo-nationality" class="basicInfo-div">
+                        <span class="basicInfo-div-title">Gender <span class="compulsory">(*)</span></span><br>
+                        <select name="basicInfo-nationality__select" id="basicInfo-nationality__select" class="basicInfo-input">
+                            <option value="Male" selected>Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    <div style="font-size: 0.9em; float: left; margin-left: 3%;"><span class="compulsory">(*)</span><span> Compulsory field</span></div>
+                    <div id="createCv-submit" style="margin-left: 85%; margin-bottom: 2vh;">
+                        <form action="./quality-teacher/teacherEvaluate.html"><button id="createCv-submit-button">Submit</button></form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
